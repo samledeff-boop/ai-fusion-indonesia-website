@@ -1,0 +1,215 @@
+/* ========================================
+   AESTHETIC UPDATES - Footer, Avatars, Buttons
+   ======================================== */
+
+/* --- 1. FOOTER ALIGNMENT --- */
+footer .container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: left !important;
+    flex-wrap: wrap !important;
+    gap: 2rem !important;
+}
+
+/* FIX: Specific alignment for Footer Logo column to match other columns */
+footer .footer-content>div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: -30px;
+    /* Pull entire column up slightly */
+}
+
+footer .logo {
+    display: block !important;
+    margin-bottom: 0 !important;
+    /* Remove container margin */
+    line-height: 0;
+    /* Remove line-height gap */
+}
+
+/* Override logo size/margin specifically for footer to align visually */
+footer .logo img {
+    height: 180px !important;
+    /* Keep requested size */
+    margin-top: -90px !important;
+    /* AGGRESSIVE PULL UP (was -50px) */
+    margin-bottom: -50px !important;
+    /* Pull tagline UP closer to logo */
+    margin-left: -25px !important;
+    /* Align left edge of logo text with container edge if needed */
+    object-position: left center !important;
+}
+
+/* Ensure footer content sections flow horizontally */
+footer .footer-content {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    text-align: left !important;
+    flex-wrap: wrap !important;
+}
+
+/* Mobile responsive footer - stack vertically */
+@media (max-width: 768px) {
+
+    footer .container,
+    footer .footer-content {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    footer .footer-content>div {
+        margin-bottom: 2rem;
+    }
+}
+
+/* --- 2. AVATAR BUBBLES --- */
+.agent-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* STRICTLY CONSTRAIN SIZE */
+.agent-tab img {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    /* Focus on face */
+    transition: all 0.3s ease !important;
+    box-sizing: border-box !important;
+}
+
+/* Amanda: remonter légèrement le cadrage pour centrer le visage */
+.agent-tab[data-agent="1"] img {
+    object-position: 50% 5px !important;
+}
+
+/* Rafi: descendre le cadrage */
+.agent-tab[data-agent="2"] img {
+    object-position: 50% 5px !important;
+}
+
+/* Sari: remonter le cadrage (image originale très haute) */
+.agent-tab[data-agent="3"] img {
+    object-position: 50% -12px !important;
+}
+
+/* Kevin: descendre le cadrage */
+.agent-tab[data-agent="4"] img {
+    object-position: 50% 5px !important;
+}
+
+/* Arif: remonter le cadrage */
+.agent-tab[data-agent="6"] img {
+    object-position: 50% -15px !important;
+}
+
+/* Specific Border/Glow Colors for Avatars */
+/* Amanda - Orange */
+.agent-tab[data-agent="1"].active img,
+.agent-tab[data-agent="1"]:hover img {
+    border: 3px solid #FF672F !important;
+    box-shadow: 0 0 15px rgba(255, 103, 47, 0.5) !important;
+    transform: scale(1.1);
+}
+
+/* Rafi - Turquoise */
+.agent-tab[data-agent="2"].active img,
+.agent-tab[data-agent="2"]:hover img {
+    border: 3px solid #3d8a92 !important;
+    box-shadow: 0 0 15px rgba(61, 138, 146, 0.5) !important;
+    transform: scale(1.1);
+}
+
+/* Sari - Blue */
+.agent-tab[data-agent="3"].active img,
+.agent-tab[data-agent="3"]:hover img {
+    border: 3px solid #5078E7 !important;
+    box-shadow: 0 0 15px rgba(80, 120, 231, 0.5) !important;
+    transform: scale(1.1);
+}
+
+/* Kevin - Purple */
+.agent-tab[data-agent="4"].active img,
+.agent-tab[data-agent="4"]:hover img {
+    border: 3px solid #8A4FFF !important;
+    box-shadow: 0 0 15px rgba(138, 79, 255, 0.5) !important;
+    transform: scale(1.1);
+}
+
+/* Dina - Green */
+.agent-tab[data-agent="5"].active img,
+.agent-tab[data-agent="5"]:hover img {
+    border: 3px solid #10B981 !important;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5) !important;
+    transform: scale(1.1);
+}
+
+/* Arif - Red */
+.agent-tab[data-agent="6"].active img,
+.agent-tab[data-agent="6"]:hover img {
+    border: 3px solid #DC2626 !important;
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.5) !important;
+    transform: scale(1.1);
+}
+
+/* --- 3. BUTTON HOVER COLORS --- */
+/* Customize "Pelajari Selengkapnya" buttons (btn-secondary) per agent using ID scope */
+
+/* Amanda - Orange */
+#agent-1 .btn-secondary:hover {
+    background-color: #FF672F !important;
+    border-color: #FF672F !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 5px 15px rgba(255, 103, 47, 0.3) !important;
+}
+
+/* Rafi - Turquoise */
+#agent-2 .btn-secondary:hover {
+    background-color: #3d8a92 !important;
+    border-color: #3d8a92 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 5px 15px rgba(61, 138, 146, 0.3) !important;
+}
+
+/* Sari - Blue */
+#agent-3 .btn-secondary:hover {
+    background-color: #5078E7 !important;
+    border-color: #5078E7 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 5px 15px rgba(80, 120, 231, 0.3) !important;
+}
+
+/* Kevin - Purple */
+#agent-4 .btn-secondary:hover {
+    background-color: #8A4FFF !important;
+    border-color: #8A4FFF !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 5px 15px rgba(138, 79, 255, 0.3) !important;
+}
+
+/* Dina - Green (if active later) */
+#agent-5 .btn-secondary:hover {
+    background-color: #10B981 !important;
+    border-color: #10B981 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Arif - Red (if active later) */
+#agent-6 .btn-secondary:hover {
+    background-color: #DC2626 !important;
+    border-color: #DC2626 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3) !important;
+}

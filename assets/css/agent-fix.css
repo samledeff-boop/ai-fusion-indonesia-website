@@ -1,0 +1,86 @@
+/* FIX SPECIFIC POUR LES PAGES AGENTS */
+
+/* Container de l'avatar sur les pages agents */
+.agent-hero .agent-avatar {
+    width: 100% !important;
+    max-width: 450px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+    /* CHANGEMENT: visible pour voir tout le portrait */
+    border-radius: 30px !important;
+    position: relative !important;
+}
+
+/* Image de l'avatar - contraintes assouplies */
+.agent-hero .agent-avatar img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    /* CHANGEMENT: contain pour voir toute l'image */
+    object-position: center top !important;
+    display: block !important;
+    border-radius: 30px !important;
+}
+
+/* Hero content layout pour les pages agents */
+.agent-hero .hero-content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 3rem !important;
+    align-items: center !important;
+}
+
+/* Hero image container */
+.agent-hero .hero-image {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .agent-hero .hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .agent-hero .agent-avatar {
+        max-width: 350px !important;
+    }
+}
+
+/* Fix pour les images PNG */
+.agent-avatar img[src*="avatar-"],
+.agent-avatar-img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 450px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+    border-radius: 30px !important;
+    margin: 0 auto !important;
+}
+
+/* Images portrait spécifiques */
+.agent-avatar img[src*="-portrait.png"] {
+    object-fit: contain !important;
+    object-position: center center !important;
+}
+
+/* Container agent-avatar pour les pages agents */
+.agent-hero .agent-avatar {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+}
+
+.agent-hero .agent-avatar img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+}

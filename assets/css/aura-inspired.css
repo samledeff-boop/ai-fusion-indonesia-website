@@ -1,0 +1,359 @@
+/* ========== COMPOSANTS INSPIRÉS D'AURA.BUILD ========== */
+
+/* 1. ANIMATED GLASSMORPHISM BUTTON (comme sur Aura) */
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-glass:hover::before {
+    left: 100%;
+}
+
+.btn-glass:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 2. NEON GLOW EFFECT (comme UnicornStudio) */
+.neon-border {
+    position: relative;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(45deg, #FF672F, #3AD8EA, #5078E7, #FF672F);
+    background-size: 300% 300%;
+    animation: neon-pulse 4s ease infinite;
+}
+
+@keyframes neon-pulse {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.neon-border-inner {
+    background: var(--color-bg-dark);
+    border-radius: 18px;
+    padding: var(--spacing-lg);
+}
+
+/* 3. GRADIENT TEXT WITH ANIMATION */
+.gradient-text-animated {
+    background: linear-gradient(90deg, #FF672F, #3AD8EA, #5078E7, #FF672F);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 5s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* 4. CARD WITH HOVER LIFT EFFECT (Aura style) */
+.card-hover-lift {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.card-hover-lift::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, transparent, rgba(255, 103, 47, 0.3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.card-hover-lift:hover::before {
+    opacity: 1;
+}
+
+.card-hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* 5. MAGNETIC BUTTON EFFECT */
+.btn-magnetic {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-magnetic:hover {
+    transform: scale(1.05);
+}
+
+.btn-magnetic:active {
+    transform: scale(0.95);
+}
+
+/* 6. SPOTLIGHT CARD (comme sur Aura) */
+.spotlight-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: var(--spacing-lg);
+    overflow: hidden;
+}
+
+.spotlight-card::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 103, 47, 0.3), transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.spotlight-card:hover::before {
+    opacity: 1;
+}
+
+/* 7. ANIMATED GRADIENT BACKGROUND */
+.gradient-bg-animated {
+    background: linear-gradient(-45deg, #FF672F, #3AD8EA, #5078E7, #8A4FFF);
+    background-size: 400% 400%;
+    animation: gradient-bg-shift 15s ease infinite;
+}
+
+@keyframes gradient-bg-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 8. FLOATING ELEMENTS (comme les cards Aura) */
+.float-animation {
+    animation: float-smooth 6s ease-in-out infinite;
+}
+
+@keyframes float-smooth {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    75% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+}
+
+/* 9. BLUR CARD (glassmorphism) */
+.blur-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* 10. ANIMATED UNDERLINE */
+.animated-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #FF672F, #3AD8EA);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated-underline:hover::after {
+    width: 100%;
+}
+
+/* 11. 3D CARD TILT */
+.card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+}
+
+/* 12. PROGRESS RING (pour les stats) */
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+    transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 13. SHIMMER LOADING */
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* 14. BORDER GRADIENT ANIMATION */
+.border-gradient-animated {
+    position: relative;
+    border-radius: 20px;
+}
+
+.border-gradient-animated::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(45deg, #FF672F, #3AD8EA, #5078E7, #8A4FFF);
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: border-rotate 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes border-rotate {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* 15. PARTICLE EFFECT (subtle) */
+.particles-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.particles-bg::before,
+.particles-bg::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.1;
+    animation: particle-float 20s ease-in-out infinite;
+}
+
+.particles-bg::before {
+    background: var(--color-orange);
+    top: -200px;
+    left: -200px;
+}
+
+.particles-bg::after {
+    background: var(--color-turquoise);
+    bottom: -200px;
+    right: -200px;
+    animation-delay: -10s;
+}
+
+@keyframes particle-float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, 50px);
+    }
+    50% {
+        transform: translate(0, 100px);
+    }
+    75% {
+        transform: translate(-50px, 50px);
+    }
+}
+
+/* 16. RESPONSIVE UTILITIES */
+@media (max-width: 768px) {
+    .btn-glass {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+
+    .neon-border {
+        padding: 1px;
+    }
+
+    .blur-card {
+        border-radius: 16px;
+    }
+}
+
+/* 17. SMOOTH SCROLL SNAP */
+.scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.scroll-snap-section {
+    scroll-snap-align: start;
+}

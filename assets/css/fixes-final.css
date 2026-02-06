@@ -1,0 +1,144 @@
+/* ========== CORRECTIONS FINALES ========== */
+
+/* 1. DÉSACTIVER LES RADIAL GLOWS QUI TOURNENT */
+.radial-glow {
+    display: none !important;
+    /* Ou si vous voulez les garder mais sans animation : */
+    /* animation: none !important; */
+}
+
+/* Si vous préférez les garder sans mouvement */
+.radial-glow.static {
+    display: block !important;
+    animation: none !important;
+    position: fixed !important;
+}
+
+header,
+.header {
+    height: 80px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+.navbar {
+    height: 80px !important;
+    width: 100% !important;
+    /* Force full width */
+    overflow: visible !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    /* Logo left, nav right */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Force container to be full width for header */
+.header .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 40px !important;
+    /* Standard padding */
+    margin: 0 !important;
+}
+
+/* =============================================
+   LOGO STYLES MOVED TO logo-override.css
+   ============================================= */
+
+
+
+/* 3. IMAGES PORTRAIT DES AGENTS - AFFICHAGE COMPLET SANS COUPURE */
+.agent-hero .agent-avatar,
+.agent-avatar {
+    max-width: 550px !important;
+    /* Augmenté un peu */
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    /* Permet des coins arrondis propres */
+    border-radius: 24px !important;
+    background: none !important;
+    border: none !important;
+    aspect-ratio: auto !important;
+    /* Supprime l'aspect-ratio */
+}
+
+.agent-avatar::before,
+.agent-avatar::after {
+    display: none !important;
+    /* Supprime les cercles pseudo-éléments */
+}
+
+.agent-hero .agent-avatar img,
+.agent-avatar img[src*="-portrait.png"] {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 550px !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 24px !important;
+}
+
+/* Container hero pour mieux gérer l'espace */
+.agent-hero .hero-content {
+    align-items: center !important;
+    gap: 6rem !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+}
+
+/* 4. RESPONSIVE POUR LES IMAGES PORTRAIT */
+@media (max-width: 768px) {
+    .agent-hero .agent-avatar {
+        max-width: 400px !important;
+    }
+
+    .agent-hero .agent-avatar img {
+        max-width: 400px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .agent-hero .agent-avatar {
+        max-width: 320px !important;
+    }
+
+    .agent-hero .agent-avatar img {
+        max-width: 320px !important;
+    }
+}
+
+/* 5. CORRIGER L'OVERFLOW DU BODY */
+body {
+    overflow-x: hidden !important;
+}
+
+/* 6. S'ASSURER QUE LES IMAGES NE SONT PAS COUPÉES ET AJUSTEMENT DU PADDING TOP */
+.agent-hero {
+    padding-top: 200px !important;
+    /* Pour compenser le logo qui déborde */
+    background: var(--color-bg-dark) !important;
+    /* Supprime les radial-gradients en fond qui font des "ovales" */
+}
+
+.hero-image {
+    overflow: visible !important;
+    min-height: 600px !important;
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        min-height: 400px !important;
+    }
+}

@@ -1,0 +1,70 @@
+/* ========================================
+   LOGO OVERRIDE - SINGLE SOURCE OF TRUTH
+   ========================================
+   This file is loaded LAST to ensure all logo styles are consistent.
+   Uses ultra-high specificity to override any conflicting rules.
+   ======================================== */
+
+/* Reset any transforms or absolute positioning from other files */
+html body header .logo,
+html body .header .logo,
+html body .navbar .logo {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+    z-index: 1001 !important;
+    overflow: visible !important;
+}
+
+/* Main logo image - DEFAULT STATE */
+html body header .logo img,
+html body .header .logo img,
+html body .header .navbar .logo img,
+html body .navbar .logo img {
+    height: 180px !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    position: relative !important;
+    transform: none !important;
+    transition: all 0.3s ease !important;
+    z-index: 1001 !important;
+    object-fit: contain !important;
+}
+
+/* SCROLLED STATE - Keep same size as default per user request */
+html body header.scrolled .logo img,
+html body .header.scrolled .logo img,
+html body .header.scrolled .navbar .logo img {
+    height: 180px !important;
+    margin-top: 0 !important;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    html body header .logo img,
+    html body .header .logo img,
+    html body .header .navbar .logo img,
+    html body .navbar .logo img {
+        height: 100px !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    html body header.scrolled .logo img,
+    html body .header.scrolled .logo img {
+        height: 100px !important;
+    }
+}
+
+/* Footer logo - match header size */
+html body footer .logo img,
+html body .footer .logo img {
+    height: 180px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}

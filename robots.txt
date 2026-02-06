@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://aifusionpartner.id/sitemap.xml
+
+# Disallow admin/internal
+User-agent: *
+Disallow: /scripts/
