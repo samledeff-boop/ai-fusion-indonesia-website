@@ -1,7 +1,7 @@
+<!--
+  Pipedrive: black mark on transparent/solid background.
+  The provided updated asset looks like a simple black square; keep it minimal.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="15%" fill="#000"/>
-  <circle cx="140" cy="256" r="60" fill="#FFF"/>
-  <path fill="#FFF" d="M200 256h112v80c0 35-28 64-64 64s-64-29-64-64v-80z"/>
-  <circle cx="372" cy="256" r="60" fill="#FFF"/>
-  <text x="256" y="420" font-family="Arial" font-size="48" font-weight="bold" fill="#FFF" text-anchor="middle">PIPEDRIVE</text>
+  <rect width="512" height="512" fill="#000"/>
 </svg>

@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://aifusionpartner.id/sitemap.xml
+Sitemap: https://id.aifusionpartner.com/sitemap.xml
 
 # Disallow admin/internal
 User-agent: *
