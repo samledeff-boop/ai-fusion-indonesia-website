@@ -22,8 +22,8 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background:#E5E5E5;
-            color: #0A0A0A;
+            background: #F5F5F5;
+            color: #1A1A1A;
             line-height: 1.8;
         }
 
@@ -37,49 +37,63 @@
             text-align: center;
             margin-bottom: 60px;
             padding-bottom: 30px;
-            border-bottom: 2px solid #FF672F;
+            border-bottom: 3px solid #FF672F;
         }
 
         .privacy-header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 700;
-            color: #0A0A0A;
+            color: #1A1A1A;
             margin-bottom: 15px;
         }
 
         .privacy-header p {
-            color: #0A0A0A;
+            color: #666;
             font-size: 1rem;
         }
 
+        .company-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF672F 0%, #FF8F5F 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
         .privacy-section {
-            margin-bottom: 50px;
-            background: #E5E5E5;
+            margin-bottom: 40px;
+            background: #FFFFFF;
             padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #1F1F1F;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #E5E5E5;
         }
 
         .privacy-section h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
-            color: #0A0A0A;
+            color: #1A1A1A;
             margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FF672F;
         }
 
         .privacy-section h3 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            color: #0A0A0A;
+            color: #333;
             margin-top: 25px;
             margin-bottom: 15px;
         }
 
         .privacy-section p {
-            color: #0A0A0A;
+            color: #444;
             margin-bottom: 15px;
         }
 
@@ -90,29 +104,61 @@
         }
 
         .privacy-section ul li {
-            color: #0A0A0A;
-            margin-bottom: 10px;
-            padding-left: 30px;
+            color: #444;
+            margin-bottom: 12px;
+            padding-left: 28px;
             position: relative;
         }
 
         .privacy-section ul li::before {
-            content: "•";
-            color: #FF672F;
-            font-weight: bold;
-            font-size: 1.5rem;
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: #FF672F;
+            border-radius: 50%;
             position: absolute;
             left: 0;
-            top: -5px;
+            top: 10px;
         }
 
         .privacy-section strong {
-            color: #0A0A0A;
+            color: #1A1A1A;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFEBE0 100%);
+            border-left: 4px solid #FF672F;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            color: #333;
+            margin: 0;
+        }
+
+        .definition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .definition-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #E5E5E5;
+            vertical-align: top;
+        }
+
+        .definition-table td:first-child {
+            font-weight: 600;
+            color: #1A1A1A;
+            width: 30%;
         }
 
         .contact-box {
-            background: linear-gradient(135deg, #1F1F1F 0%, #2A2A2A 100%);
-            padding: 30px;
+            background: linear-gradient(135deg, #1A1A1A 0%, #333 100%);
+            padding: 40px;
             border-radius: 20px;
             text-align: center;
             margin-top: 50px;
@@ -121,36 +167,41 @@
         .contact-box h3 {
             color: #FFFFFF;
             font-size: 1.5rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .contact-box p {
-            color: #E5E5E5;
+            color: #CCC;
             margin-bottom: 10px;
+            line-height: 1.8;
         }
 
         .contact-box a {
             color: #FF672F;
-            text-decoration: underline;
+            text-decoration: none;
             font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
         }
 
         .back-link {
             display: inline-block;
             margin-top: 40px;
-            padding: 15px 30px;
+            padding: 15px 35px;
             background: #FF672F;
             color: #FFFFFF;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 50px;
             font-weight: 600;
-            border: 2px solid #FF672F;
             transition: all 0.3s ease;
         }
 
         .back-link:hover {
-            background: #FF672F;
-            color: #FFFFFF;
+            background: #E55A25;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255,103,47,0.3);
         }
 
         @media (max-width: 768px) {
@@ -163,7 +214,11 @@
             }
 
             .privacy-section h2 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+            }
+
+            .definition-table td:first-child {
+                width: 40%;
             }
         }
     </style>
@@ -173,214 +228,359 @@
     <div class="privacy-container">
         <div class="privacy-header">
             <h1>Kebijakan Privasi</h1>
-            <p>Terakhir diperbarui: 31 Januari 2026</p>
+            <p>Terakhir diperbarui: 6 Februari 2026</p>
+            <div class="company-badge">CV KREASI BAGUS BERSAMA</div>
         </div>
 
+        <!-- Section 1: Pengantar -->
         <div class="privacy-section">
             <h2>1. Pengantar</h2>
             <p>
-                Selamat datang di AI Fusion Partner. Kami berkomitmen untuk melindungi privasi dan data pribadi Anda.
-                Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi
-                informasi Anda saat menggunakan layanan kami.
+                Selamat datang di AI Fusion Partner ("Kami", "Perusahaan"). Kami berkomitmen untuk melindungi privasi
+                dan keamanan data pribadi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan,
+                menyimpan, dan melindungi informasi Anda saat menggunakan platform agen AI kami.
             </p>
-            <p>
-                Dengan menggunakan layanan AI Fusion Partner, Anda menyetujui pengumpulan dan penggunaan informasi
-                sesuai dengan kebijakan ini.
-            </p>
+            <div class="highlight-box">
+                <p>
+                    <strong>Penting:</strong> Dengan menggunakan layanan AI Fusion Partner, Anda menyetujui pengumpulan
+                    dan penggunaan informasi sesuai dengan Kebijakan Privasi ini.
+                </p>
+            </div>
 
             <h3>1.1 Informasi Perusahaan</h3>
             <p>Layanan AI Fusion Partner dioperasikan oleh:</p>
+            <table class="definition-table">
+                <tr>
+                    <td>Nama Perusahaan</td>
+                    <td>CV KREASI BAGUS BERSAMA</td>
+                </tr>
+                <tr>
+                    <td>Bentuk Badan Usaha</td>
+                    <td>Persekutuan Komanditer (CV)</td>
+                </tr>
+                <tr>
+                    <td>NIB</td>
+                    <td>1611230080728</td>
+                </tr>
+                <tr>
+                    <td>Alamat Terdaftar</td>
+                    <td>Ganidha Residence, Jl. Gunung Salak, Padangsambian Kelod, Denpasar Barat, Kota Denpasar, Bali 80117, Indonesia</td>
+                </tr>
+                <tr>
+                    <td>Registrasi</td>
+                    <td>Kementerian Hukum dan HAM RI (AHU-0070634-AH.01.14 Tahun 2023)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 2: Definisi -->
+        <div class="privacy-section">
+            <h2>2. Definisi</h2>
+            <p>Dalam Kebijakan Privasi ini, istilah-istilah berikut memiliki arti sebagai berikut:</p>
+            <table class="definition-table">
+                <tr>
+                    <td>Informasi Pribadi</td>
+                    <td>Setiap informasi yang dapat mengidentifikasi Anda secara langsung atau tidak langsung, termasuk nama, email, nomor telepon, dan data bisnis.</td>
+                </tr>
+                <tr>
+                    <td>Agen AI</td>
+                    <td>Asisten virtual berbasis kecerdasan buatan yang kami sediakan untuk otomatisasi bisnis Anda.</td>
+                </tr>
+                <tr>
+                    <td>Platform</td>
+                    <td>Website, aplikasi, dan layanan AI Fusion Partner yang dapat diakses melalui id.aifusionpartner.com.</td>
+                </tr>
+                <tr>
+                    <td>Cookie</td>
+                    <td>File kecil yang disimpan di perangkat Anda untuk meningkatkan pengalaman pengguna.</td>
+                </tr>
+                <tr>
+                    <td>Integrasi Pihak Ketiga</td>
+                    <td>Layanan eksternal yang terhubung dengan platform kami, seperti WhatsApp Business, Instagram, dan marketplace.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 3: Data yang Dikumpulkan -->
+        <div class="privacy-section">
+            <h2>3. Informasi yang Kami Kumpulkan</h2>
+
+            <h3>3.1 Informasi yang Anda Berikan</h3>
             <ul>
-                <li><strong>Nama Perusahaan:</strong> CV KREASI BAGUS BERSAMA</li>
-                <li><strong>Bentuk Badan Usaha:</strong> Persekutuan Komanditer (CV)</li>
-                <li><strong>Nomor Induk Berusaha (NIB):</strong> 1611230080728</li>
-                <li><strong>Alamat Terdaftar:</strong> Ganidha Residence, Jl. Gunung Salak, Padangsambian Kelod, Denpasar Barat, Kota Denpasar, Bali 80117, Indonesia</li>
-                <li><strong>Terdaftar di:</strong> Kementerian Hukum dan HAM RI (AHU-0070634-AH.01.14 Tahun 2023)</li>
+                <li><strong>Informasi Akun:</strong> Nama lengkap, alamat email, nomor telepon, nama perusahaan, dan jabatan</li>
+                <li><strong>Informasi Pembayaran:</strong> Detail pembayaran yang diproses melalui penyedia pembayaran pihak ketiga yang aman (Xendit, Stripe)</li>
+                <li><strong>Data Komunikasi:</strong> Percakapan pelanggan melalui WhatsApp, Instagram, TikTok, dan platform lain yang Anda hubungkan</li>
+                <li><strong>Konten Bisnis:</strong> Informasi produk, FAQ, template pesan, knowledge base, dan konten lain yang Anda upload</li>
+                <li><strong>Umpan Balik:</strong> Komentar, saran, dan feedback yang Anda berikan kepada kami</li>
+            </ul>
+
+            <h3>3.2 Informasi yang Dikumpulkan Secara Otomatis</h3>
+            <ul>
+                <li><strong>Data Penggunaan:</strong> Fitur yang diakses, waktu penggunaan, interaksi dengan agen AI</li>
+                <li><strong>Informasi Teknis:</strong> Alamat IP, jenis browser, sistem operasi, device identifier</li>
+                <li><strong>Cookie dan Teknologi Pelacakan:</strong> Data untuk meningkatkan pengalaman dan performa platform</li>
+                <li><strong>Analytics Agen AI:</strong> Metrik performa, tingkat respons, analisis sentimen, dan statistik percakapan</li>
+            </ul>
+
+            <h3>3.3 Informasi dari Integrasi WhatsApp Business</h3>
+            <ul>
+                <li>Nomor telepon pelanggan yang menghubungi bisnis Anda</li>
+                <li>Riwayat percakapan untuk keperluan layanan pelanggan</li>
+                <li>Data interaksi untuk meningkatkan respons agen AI</li>
             </ul>
         </div>
 
+        <!-- Section 4: Penggunaan Data -->
         <div class="privacy-section">
-            <h2>2. Informasi yang Kami Kumpulkan</h2>
-
-            <h3>2.1 Informasi yang Anda Berikan</h3>
-            <ul>
-                <li><strong>Informasi Akun:</strong> Nama, email, nomor telepon, nama perusahaan</li>
-                <li><strong>Informasi Pembayaran:</strong> Detail kartu kredit/debit, alamat penagihan (diproses melalui penyedia pembayaran pihak ketiga yang aman)</li>
-                <li><strong>Data Komunikasi:</strong> Percakapan WhatsApp, Instagram, TikTok, dan platform lain yang Anda hubungkan</li>
-                <li><strong>Konten Bisnis:</strong> Informasi produk, FAQ, template pesan, dan konten lain yang Anda upload</li>
-            </ul>
-
-            <h3>2.2 Informasi yang Dikumpulkan Secara Otomatis</h3>
-            <ul>
-                <li><strong>Data Penggunaan:</strong> Bagaimana Anda menggunakan platform kami, fitur yang diakses, waktu penggunaan</li>
-                <li><strong>Informasi Teknis:</strong> Alamat IP, jenis browser, sistem operasi, provider internet</li>
-                <li><strong>Cookie dan Teknologi Tracking:</strong> Kami menggunakan cookie untuk meningkatkan pengalaman Anda</li>
-                <li><strong>Data Analytics:</strong> Metrik performa agen AI, tingkat respons, sentiment analysis</li>
-            </ul>
-        </div>
-
-        <div class="privacy-section">
-            <h2>3. Bagaimana Kami Menggunakan Informasi Anda</h2>
+            <h2>4. Bagaimana Kami Menggunakan Informasi Anda</h2>
             <p>Kami menggunakan informasi yang dikumpulkan untuk:</p>
+
+            <h3>4.1 Penyediaan Layanan</h3>
             <ul>
-                <li><strong>Menyediakan Layanan:</strong> Menjalankan agen AI Anda, memproses percakapan pelanggan, mengirim notifikasi</li>
-                <li><strong>Meningkatkan Layanan:</strong> Menganalisis penggunaan untuk meningkatkan fitur dan performa</li>
-                <li><strong>Personalisasi:</strong> Menyesuaikan pengalaman Anda berdasarkan preferensi dan kebutuhan bisnis</li>
-                <li><strong>Komunikasi:</strong> Mengirim update produk, tips penggunaan, penawaran khusus (Anda dapat opt-out kapan saja)</li>
-                <li><strong>Keamanan:</strong> Mendeteksi dan mencegah penipuan, abuse, dan aktivitas ilegal</li>
-                <li><strong>Kepatuhan Hukum:</strong> Memenuhi kewajiban hukum dan regulasi yang berlaku</li>
-                <li><strong>Pelatihan AI:</strong> Meningkatkan model AI kami (data dianonimkan dan diagregasi)</li>
+                <li>Menjalankan dan mengoperasikan agen AI Anda</li>
+                <li>Memproses percakapan pelanggan secara otomatis</li>
+                <li>Mengirim notifikasi dan alert terkait layanan</li>
+                <li>Menyediakan dukungan pelanggan</li>
+            </ul>
+
+            <h3>4.2 Peningkatan Layanan</h3>
+            <ul>
+                <li>Menganalisis penggunaan untuk meningkatkan fitur dan performa</li>
+                <li>Mengembangkan fitur baru berdasarkan kebutuhan pengguna</li>
+                <li>Melatih model AI untuk respons yang lebih baik (menggunakan data yang dianonimkan)</li>
+            </ul>
+
+            <h3>4.3 Komunikasi</h3>
+            <ul>
+                <li>Mengirim update produk dan fitur baru</li>
+                <li>Memberikan tips penggunaan dan best practices</li>
+                <li>Mengirim penawaran khusus (Anda dapat opt-out kapan saja)</li>
+            </ul>
+
+            <h3>4.4 Keamanan dan Kepatuhan</h3>
+            <ul>
+                <li>Mendeteksi dan mencegah penipuan, penyalahgunaan, dan aktivitas ilegal</li>
+                <li>Memenuhi kewajiban hukum dan regulasi yang berlaku</li>
+                <li>Melindungi hak dan keamanan pengguna kami</li>
             </ul>
         </div>
 
+        <!-- Section 5: Pembagian Data -->
         <div class="privacy-section">
-            <h2>4. Pembagian Informasi dengan Pihak Ketiga</h2>
-            <p>
-                Kami <strong>tidak menjual</strong> data pribadi Anda kepada siapapun. Namun, kami dapat membagikan
-                informasi Anda dengan:
-            </p>
+            <h2>5. Pembagian Informasi dengan Pihak Ketiga</h2>
+            <div class="highlight-box">
+                <p>
+                    <strong>Kami TIDAK menjual, menyewakan, atau memperdagangkan Informasi Pribadi Anda kepada pihak ketiga.</strong>
+                </p>
+            </div>
+            <p>Namun, kami dapat membagikan informasi Anda dengan:</p>
 
-            <h3>4.1 Penyedia Layanan</h3>
+            <h3>5.1 Penyedia Layanan Terpercaya</h3>
             <ul>
-                <li><strong>Penyedia Cloud Hosting:</strong> AWS, Google Cloud (untuk penyimpanan data)</li>
-                <li><strong>Payment Processor:</strong> Stripe, Xendit (untuk pemrosesan pembayaran)</li>
-                <li><strong>Analytics Tools:</strong> Google Analytics, Mixpanel (untuk analisis penggunaan)</li>
-                <li><strong>Email Service:</strong> SendGrid, Mailgun (untuk notifikasi email)</li>
-                <li><strong>AI Platform:</strong> OpenAI, Anthropic (untuk pemrosesan natural language)</li>
+                <li><strong>Cloud Hosting:</strong> AWS, Google Cloud Platform (penyimpanan data)</li>
+                <li><strong>Payment Processor:</strong> Xendit, Stripe (pemrosesan pembayaran aman)</li>
+                <li><strong>AI Platform:</strong> OpenAI, Anthropic (pemrosesan bahasa alami)</li>
+                <li><strong>Email Service:</strong> SendGrid (notifikasi email)</li>
+                <li><strong>Analytics:</strong> Google Analytics (analisis penggunaan anonim)</li>
             </ul>
+            <p>Semua penyedia layanan terikat perjanjian kerahasiaan dan hanya dapat menggunakan data untuk tujuan yang ditentukan.</p>
 
-            <h3>4.2 Platform Terintegrasi</h3>
+            <h3>5.2 Platform Terintegrasi</h3>
             <p>
-                Jika Anda menghubungkan platform seperti WhatsApp, Instagram, Shopee, atau Tokopedia, kami akan mengakses
-                dan memproses data sesuai dengan otorisasi yang Anda berikan.
+                Jika Anda menghubungkan platform seperti WhatsApp Business API, Instagram, Shopee, atau Tokopedia,
+                kami akan mengakses dan memproses data sesuai dengan otorisasi yang Anda berikan.
             </p>
 
-            <h3>4.3 Kewajiban Hukum</h3>
+            <h3>5.3 Kewajiban Hukum</h3>
             <p>
-                Kami dapat mengungkapkan informasi Anda jika diwajibkan oleh hukum atau untuk melindungi hak, properti,
-                atau keselamatan AI Fusion Partner, pengguna kami, atau publik.
+                Kami dapat mengungkapkan informasi Anda jika diwajibkan oleh hukum, proses pengadilan, atau
+                permintaan pemerintah yang sah, atau untuk melindungi hak, properti, dan keselamatan kami atau pengguna kami.
             </p>
         </div>
 
+        <!-- Section 6: Keamanan -->
         <div class="privacy-section">
-            <h2>5. Keamanan Data</h2>
-            <p>Kami menggunakan langkah-langkah keamanan industri standar untuk melindungi data Anda:</p>
+            <h2>6. Keamanan Data</h2>
+            <p>Kami menerapkan langkah-langkah keamanan standar industri:</p>
             <ul>
-                <li><strong>Enkripsi:</strong> Data ditransmisikan menggunakan SSL/TLS encryption</li>
-                <li><strong>Enkripsi at Rest:</strong> Data disimpan dengan enkripsi AES-256</li>
-                <li><strong>Kontrol Akses:</strong> Akses terbatas hanya untuk personel yang berwenang</li>
-                <li><strong>Monitoring 24/7:</strong> Sistem keamanan dimonitor secara real-time</li>
-                <li><strong>Regular Audits:</strong> Audit keamanan berkala oleh pihak ketiga</li>
+                <li><strong>Enkripsi Transit:</strong> Semua data ditransmisikan menggunakan SSL/TLS encryption</li>
+                <li><strong>Enkripsi Penyimpanan:</strong> Data sensitif disimpan dengan enkripsi AES-256</li>
+                <li><strong>Kontrol Akses:</strong> Akses data dibatasi berdasarkan prinsip "need-to-know"</li>
+                <li><strong>Monitoring 24/7:</strong> Sistem keamanan dipantau secara real-time</li>
+                <li><strong>Audit Berkala:</strong> Evaluasi keamanan rutin untuk mengidentifikasi kerentanan</li>
                 <li><strong>Backup Otomatis:</strong> Data di-backup secara teratur untuk disaster recovery</li>
             </ul>
-            <p>
-                Namun, tidak ada metode transmisi data melalui internet atau penyimpanan elektronik yang 100% aman.
-                Kami tidak dapat menjamin keamanan absolut.
-            </p>
+            <div class="highlight-box">
+                <p>
+                    <strong>Catatan:</strong> Meskipun kami berupaya melindungi data Anda, tidak ada metode transmisi
+                    melalui internet yang 100% aman. Kami tidak dapat menjamin keamanan absolut.
+                </p>
+            </div>
         </div>
 
+        <!-- Section 7: Penghapusan Akun -->
         <div class="privacy-section">
-            <h2>6. Retensi Data</h2>
-            <p>Kami menyimpan data Anda selama:</p>
+            <h2>7. Penghapusan Akun dan Data</h2>
+            <p>Anda dapat meminta penghapusan akun dan data Anda kapan saja:</p>
+
+            <h3>7.1 Cara Mengajukan Penghapusan</h3>
             <ul>
-                <li><strong>Akun Aktif:</strong> Selama akun Anda aktif dan digunakan</li>
-                <li><strong>Setelah Penghapusan:</strong> 30 hari untuk memungkinkan pemulihan akun</li>
-                <li><strong>Data Backup:</strong> Hingga 90 hari dalam sistem backup</li>
-                <li><strong>Data Analytics:</strong> Data agregat dan dianonimkan dapat disimpan secara permanen untuk analisis</li>
-                <li><strong>Kewajiban Hukum:</strong> Data dapat disimpan lebih lama jika diwajibkan oleh hukum</li>
+                <li>Kirim email ke <strong>contact@id.aifusionpartner.com</strong> dengan subjek "Permintaan Penghapusan Akun"</li>
+                <li>Sertakan nama lengkap dan email yang terdaftar</li>
+                <li>Kami akan memproses permintaan dalam waktu 14 hari kerja</li>
+            </ul>
+
+            <h3>7.2 Apa yang Terjadi Setelah Penghapusan</h3>
+            <ul>
+                <li>Akun dan semua data terkait akan dihapus secara permanen</li>
+                <li>Data tidak dapat dipulihkan setelah penghapusan</li>
+                <li>Data anonim yang sudah diagregasi mungkin tetap disimpan untuk keperluan analitik</li>
+                <li>Data yang diwajibkan oleh hukum mungkin disimpan sesuai ketentuan yang berlaku</li>
             </ul>
         </div>
 
+        <!-- Section 8: Retensi Data -->
         <div class="privacy-section">
-            <h2>7. Hak Anda</h2>
-            <p>Anda memiliki hak untuk:</p>
+            <h2>8. Retensi Data</h2>
+            <p>Kami menyimpan data Anda berdasarkan ketentuan berikut:</p>
+            <table class="definition-table">
+                <tr>
+                    <td>Akun Aktif</td>
+                    <td>Selama akun Anda aktif dan digunakan</td>
+                </tr>
+                <tr>
+                    <td>Setelah Pembatalan</td>
+                    <td>30 hari untuk memungkinkan pemulihan akun</td>
+                </tr>
+                <tr>
+                    <td>Data Backup</td>
+                    <td>Hingga 90 hari dalam sistem backup</td>
+                </tr>
+                <tr>
+                    <td>Data Analytics</td>
+                    <td>Data anonim dapat disimpan untuk analisis jangka panjang</td>
+                </tr>
+                <tr>
+                    <td>Kewajiban Hukum</td>
+                    <td>Sesuai ketentuan hukum yang berlaku di Indonesia</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 9: Hak Pengguna -->
+        <div class="privacy-section">
+            <h2>9. Hak Anda</h2>
+            <p>Anda memiliki hak-hak berikut terkait data pribadi Anda:</p>
             <ul>
-                <li><strong>Akses:</strong> Meminta salinan data pribadi Anda</li>
-                <li><strong>Koreksi:</strong> Memperbaiki data yang tidak akurat</li>
-                <li><strong>Penghapusan:</strong> Meminta penghapusan data Anda ("Right to be Forgotten")</li>
-                <li><strong>Pembatasan:</strong> Membatasi pemrosesan data Anda</li>
-                <li><strong>Portabilitas:</strong> Menerima data Anda dalam format yang dapat dibaca mesin</li>
-                <li><strong>Keberatan:</strong> Menolak pemrosesan data tertentu</li>
-                <li><strong>Opt-out Marketing:</strong> Berhenti menerima komunikasi marketing</li>
+                <li><strong>Hak Akses:</strong> Meminta salinan data pribadi Anda yang kami simpan</li>
+                <li><strong>Hak Koreksi:</strong> Memperbaiki data yang tidak akurat atau tidak lengkap</li>
+                <li><strong>Hak Penghapusan:</strong> Meminta penghapusan data Anda ("Right to be Forgotten")</li>
+                <li><strong>Hak Pembatasan:</strong> Membatasi pemrosesan data Anda dalam keadaan tertentu</li>
+                <li><strong>Hak Portabilitas:</strong> Menerima data Anda dalam format yang dapat dibaca mesin</li>
+                <li><strong>Hak Keberatan:</strong> Menolak pemrosesan data untuk tujuan tertentu</li>
+                <li><strong>Hak Opt-out:</strong> Berhenti menerima komunikasi marketing kapan saja</li>
             </ul>
             <p>
-                Untuk menggunakan hak-hak ini, silakan hubungi kami di <strong>contact@id.aifusionpartner.com</strong>
+                Untuk menggunakan hak-hak ini, silakan hubungi kami di <strong>contact@id.aifusionpartner.com</strong>.
+                Kami akan merespons permintaan Anda dalam waktu 30 hari.
             </p>
         </div>
 
+        <!-- Section 10: Cookie -->
         <div class="privacy-section">
-            <h2>8. Cookie dan Teknologi Tracking</h2>
+            <h2>10. Cookie dan Teknologi Pelacakan</h2>
             <p>Kami menggunakan cookie dan teknologi serupa untuk:</p>
             <ul>
-                <li><strong>Cookie Esensial:</strong> Diperlukan untuk fungsi dasar website (login, keamanan)</li>
-                <li><strong>Cookie Analytics:</strong> Memahami bagaimana pengunjung menggunakan website</li>
-                <li><strong>Cookie Marketing:</strong> Menampilkan iklan yang relevan</li>
-                <li><strong>Cookie Preferensi:</strong> Menyimpan pengaturan dan preferensi Anda</li>
+                <li><strong>Cookie Esensial:</strong> Diperlukan untuk fungsi dasar platform (login, keamanan sesi)</li>
+                <li><strong>Cookie Fungsional:</strong> Menyimpan preferensi dan pengaturan Anda</li>
+                <li><strong>Cookie Analytics:</strong> Memahami bagaimana pengguna menggunakan platform (Google Analytics)</li>
+                <li><strong>Cookie Marketing:</strong> Menampilkan iklan yang relevan (dapat di-nonaktifkan)</li>
             </ul>
             <p>
-                Anda dapat mengatur browser Anda untuk menolak cookie, namun beberapa fitur website mungkin tidak berfungsi
-                dengan baik.
+                Anda dapat mengatur browser untuk menolak cookie, namun beberapa fitur platform mungkin tidak
+                berfungsi dengan optimal.
             </p>
         </div>
 
+        <!-- Section 11: Transfer Internasional -->
         <div class="privacy-section">
-            <h2>9. Privasi Anak-anak</h2>
+            <h2>11. Transfer Data Internasional</h2>
             <p>
-                Layanan kami tidak ditujukan untuk anak-anak di bawah 18 tahun. Kami tidak secara sengaja mengumpulkan
-                informasi pribadi dari anak-anak. Jika Anda mengetahui bahwa anak Anda memberikan informasi pribadi
-                kepada kami, silakan hubungi kami dan kami akan segera menghapus informasi tersebut.
+                Data Anda mungkin ditransfer dan disimpan di server yang berlokasi di luar Indonesia,
+                termasuk di Amerika Serikat, Singapura, atau negara lain di mana penyedia layanan kami beroperasi.
+            </p>
+            <p>
+                Kami memastikan bahwa transfer data internasional dilakukan dengan perlindungan yang memadai
+                sesuai dengan standar perlindungan data yang berlaku, termasuk penggunaan Standard Contractual
+                Clauses (SCC) atau mekanisme transfer yang disetujui.
             </p>
         </div>
 
-        <div class="privacy-section">
-            <h2>10. Transfer Data Internasional</h2>
-            <p>
-                Data Anda mungkin ditransfer dan disimpan di server yang berlokasi di luar Indonesia, termasuk di
-                Amerika Serikat, Singapura, atau negara lain. Kami memastikan bahwa transfer data ini dilakukan sesuai
-                dengan standar perlindungan data yang berlaku.
-            </p>
-        </div>
-
-        <div class="privacy-section">
-            <h2>11. Perubahan pada Kebijakan Privasi</h2>
-            <p>
-                Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan signifikan akan diberitahukan
-                melalui email atau notifikasi di platform kami. Tanggal "Terakhir diperbarui" di bagian atas akan
-                diperbarui sesuai.
-            </p>
-            <p>
-                Penggunaan berkelanjutan layanan kami setelah perubahan berarti Anda menerima Kebijakan Privasi yang
-                diperbarui.
-            </p>
-        </div>
-
+        <!-- Section 12: Kepatuhan Regulasi -->
         <div class="privacy-section">
             <h2>12. Kepatuhan terhadap Regulasi</h2>
-            <p>Kami mematuhi regulasi perlindungan data yang berlaku, termasuk:</p>
+            <p>Kami mematuhi regulasi perlindungan data yang berlaku:</p>
+
+            <h3>12.1 Regulasi Indonesia</h3>
             <ul>
-                <li><strong>UU ITE Indonesia:</strong> Undang-Undang Informasi dan Transaksi Elektronik</li>
+                <li><strong>UU PDP (UU No. 27 Tahun 2022):</strong> Undang-Undang Perlindungan Data Pribadi</li>
+                <li><strong>UU ITE (UU No. 11 Tahun 2008):</strong> Undang-Undang Informasi dan Transaksi Elektronik</li>
                 <li><strong>PP 71/2019:</strong> Peraturan Pemerintah tentang Penyelenggaraan Sistem dan Transaksi Elektronik</li>
+            </ul>
+
+            <h3>12.2 Regulasi Internasional</h3>
+            <ul>
                 <li><strong>GDPR:</strong> General Data Protection Regulation (untuk pengguna di Uni Eropa)</li>
-                <li><strong>CCPA:</strong> California Consumer Privacy Act (untuk pengguna di California)</li>
+                <li><strong>CCPA:</strong> California Consumer Privacy Act (untuk pengguna di California, AS)</li>
             </ul>
         </div>
 
+        <!-- Section 13: Privasi Anak -->
+        <div class="privacy-section">
+            <h2>13. Privasi Anak-anak</h2>
+            <p>
+                Layanan AI Fusion Partner ditujukan untuk pengguna bisnis berusia minimal 18 tahun.
+                Kami tidak secara sengaja mengumpulkan informasi pribadi dari anak di bawah 18 tahun.
+            </p>
+            <p>
+                Jika Anda mengetahui bahwa anak di bawah 18 tahun telah memberikan informasi pribadi kepada kami,
+                silakan hubungi kami segera dan kami akan mengambil langkah untuk menghapus informasi tersebut.
+            </p>
+        </div>
+
+        <!-- Section 14: Perubahan Kebijakan -->
+        <div class="privacy-section">
+            <h2>14. Perubahan pada Kebijakan Privasi</h2>
+            <p>
+                Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu untuk mencerminkan perubahan
+                dalam praktik kami atau persyaratan hukum.
+            </p>
+            <ul>
+                <li>Perubahan signifikan akan diberitahukan melalui email atau notifikasi di platform</li>
+                <li>Tanggal "Terakhir diperbarui" akan diperbarui sesuai</li>
+                <li>Penggunaan berkelanjutan setelah perubahan berarti Anda menerima Kebijakan Privasi yang diperbarui</li>
+            </ul>
+        </div>
+
+        <!-- Contact Box -->
         <div class="contact-box">
             <h3>Hubungi Kami</h3>
             <p>
-                Jika Anda memiliki pertanyaan atau kekhawatiran tentang Kebijakan Privasi ini, silakan hubungi:
+                Jika Anda memiliki pertanyaan, kekhawatiran, atau permintaan terkait Kebijakan Privasi ini,
+                silakan hubungi:
             </p>
             <p>
-                <strong>CV KREASI BAGUS BERSAMA</strong><br>
+                <strong style="color: #FF672F;">CV KREASI BAGUS BERSAMA</strong><br>
                 Ganidha Residence, Jl. Gunung Salak<br>
                 Padangsambian Kelod, Denpasar Barat<br>
                 Kota Denpasar, Bali 80117, Indonesia<br><br>
-                <strong>Email:</strong> <a href="mailto:contact@id.aifusionpartner.com">contact@id.aifusionpartner.com</a>
+                <strong>Email:</strong> <a href="mailto:contact@id.aifusionpartner.com">contact@id.aifusionpartner.com</a><br>
+                <strong>WhatsApp:</strong> <a href="https://wa.me/6285959866099">+62 859-5986-6099</a>
             </p>
         </div>
 
         <div style="text-align: center;">
-            <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+            <a href="index.html" class="back-link">Kembali ke Beranda</a>
         </div>
     </div>
 </body>
