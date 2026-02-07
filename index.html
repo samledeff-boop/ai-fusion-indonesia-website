@@ -633,7 +633,11 @@
                     <img src="assets/images/logos/logo-white-bg.webp" alt="AI Fusion Partner Logo">
                 </a>
 
-                <ul class="nav-menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
                     <li><a href="#agents" class="nav-link">Agen AI</a></li>
                     <li><a href="#integrations" class="nav-link">Integrasi</a></li>
                     <li><a href="#pricing" class="nav-link">Harga</a></li>
@@ -1641,8 +1645,8 @@
                 </div>
                 <div>
                     <h4 class="footer-title">Hubungi Kami</h4>
-                    <p class="footer-text">📧 <a href="mailto:sami@id.aifusionpartner.com"
-                            style="color: inherit;">contact@id.aifusionpartner.com</a></p>
+                    <p class="footer-text">📧 <a href="mailto:contact@aifusionpartner.com"
+                            style="color: inherit;">contact@aifusionpartner.com</a></p>
                     <p class="footer-text">📍 Bali, Indonesia</p>
                 </div>
             </div>
@@ -1761,6 +1765,26 @@
                 closeExitPopup();
             }
         });
+    </script>
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
     </script>
 </body>
 

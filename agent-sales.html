@@ -16,8 +16,7 @@
         rel="stylesheet">
 
     <!-- Modern Stylesheet -->
-    <link rel="stylesheet" href="assets/css/modern-style.css">
-    <link rel="stylesheet" href="assets/css/agent-fix.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <style>
         .agent-hero {
             padding-top: 200px;
@@ -75,11 +74,6 @@
             font-weight: 500;
         }
     </style>
-    <link rel="stylesheet" href="assets/css/aura-enhancements.css">
-    <link rel="stylesheet" href="assets/css/fixes-final.css">
-    <link rel="stylesheet" href="assets/css/aura-inspired.css">
-    <!-- Logo Override - MUST BE LAST -->
-    <link rel="stylesheet" href="assets/css/logo-override.css">
     <!-- Aesthetic Updates -->
     <link rel="stylesheet" href="assets/css/aesthetic-updates.css">
 </head>
@@ -88,14 +82,18 @@
     <div class="radial-glow glow-blue"></div>
 
     <!-- ========== HEADER ========== -->
-     <header class="header" id="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
                     <img src="assets/images/logos/logo-white-bg.webp" alt="AI Fusion Partner Logo">
                 </a>
 
-                <ul class="nav-menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html#agents" class="nav-link">Agen AI</a></li>
                     <li><a href="index.html#integrations" class="nav-link">Integrasi</a></li>
                     <li><a href="index.html#pricing" class="nav-link">Harga</a></li>
@@ -286,7 +284,8 @@
                     <h4 style="color: var(--color-text-primary); margin-bottom: var(--spacing-sm); font-size: 1rem;">
                         Hubungi Kami</h4>
                     <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-xs);">📧
-                        <a href="mailto:sami@id.aifusionpartner.com" style="color: inherit;">sami@id.aifusionpartner.com</a>
+                        <a href="mailto:contact@aifusionpartner.com"
+                            style="color: inherit;">contact@aifusionpartner.com</a>
                     </p>
                     <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-xs);">📍
                         Bali, Indonesia</p>
@@ -303,6 +302,26 @@
     </footer>
 
     <script src="assets/js/animations.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
