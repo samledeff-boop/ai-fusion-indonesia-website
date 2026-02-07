@@ -198,16 +198,20 @@
     <div class="radial-glow glow-blue"></div>
 
     <!-- ========== HEADER ========== -->
-    <header class="header" id="header">
+        <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/logos/logo-white-bg.png" alt="AI Fusion Partner Logo" loading="lazy">
+                    <img src="assets/images/logos/logo-white-bg.webp" alt="AI Fusion Partner Logo" loading="lazy">
                 </a>
 
-                <ul class="nav-menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
                     <li class="dropdown">
-                        <a href="#agents" class="nav-link dropdown-toggle">Agen AI</a>
+                        <a href="index.html#agents" class="nav-link dropdown-toggle">Agen AI</a>
                         <ul class="dropdown-menu">
                             <li><a href="amanda.html">Amanda - Support WhatsApp</a></li>
                             <li><a href="rafi.html">Rafi - Social Media</a></li>
@@ -219,10 +223,11 @@
                             <li><a href="sami.html">Sami - Operations</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.html#pricing" class="nav-link">Harga</a></li>
                     <li><a href="index.html#integrations" class="nav-link">Integrasi</a></li>
+                    <li><a href="index.html#pricing" class="nav-link">Harga</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
                     <li><a href="https://wa.me/6285959866099?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20ingin%20booking%20demo%20gratis"
-                            class="btn btn-primary">Demo Gratis</a></li>
+                            class="btn btn-primary">Konsultasi Gratis</a></li>
                 </ul>
             </nav>
         </div>
