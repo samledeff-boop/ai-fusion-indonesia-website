@@ -72,10 +72,132 @@
         .stat-label {
             color: var(--color-text-secondary);
             font-weight: 500;
+        }        /* Bubble Glow for Kevin */
+        .agent-avatar {
+            position: relative;
         }
+
+        .agent-avatar::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            height: 110%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .agent-avatar-img {
+            border: 3px solid #8B5CF6;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+        }
+
     </style>
     <!-- Aesthetic Updates -->
-    <link rel="stylesheet" href="assets/css/aesthetic-updates.css">
+    <link rel="stylesheet" href="assets/css/aesthetic-updates.css">    <style>
+
+    /* Dropdown Menu Styles */
+    .nav-menu li {
+        position: relative;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .dropdown-toggle::after {
+        content: '▼';
+        font-size: 0.7em;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown:hover .dropdown-toggle::after {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--color-bg-darker);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 8px 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-menu li {
+        list-style: none;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--color-text-primary);
+        padding-left: 25px;
+    }
+
+    @media (max-width: 768px) {
+        .dropdown-menu {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            border: none;
+            box-shadow: none;
+            padding-left: 20px;
+            background: transparent;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .dropdown.active .dropdown-menu {
+            max-height: 500px;
+        }
+
+        .dropdown-toggle::after {
+            content: '+';
+        }
+
+        .dropdown.active .dropdown-toggle::after {
+            content: '−';
+            transform: none;
+        }
+    }
+
+    </style>
+
 </head>
 
 <body>
@@ -94,7 +216,19 @@
                 </button>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html#agents" class="nav-link">Agen AI</a></li>
+                    <li class="dropdown">
+                        <a href="#agents" class="nav-link dropdown-toggle">Agen AI</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="amanda.html">🤖 Amanda - Support WhatsApp</a></li>
+                            <li><a href="rafi.html">📱 Rafi - Social Media</a></li>
+                            <li><a href="sari.html">🔍 Sari - SEO & Content</a></li>
+                            <li><a href="kevin.html">💼 Kevin - Sales & Management</a></li>
+                            <li><a href="dina.html">💰 Dina - Finance</a></li>
+                            <li><a href="arif.html">⚖️ Arif - Legal</a></li>
+                            <li><a href="nabila.html">👥 Nabila - HR</a></li>
+                            <li><a href="sami.html">⚙️ Sami - Operations</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.html#integrations" class="nav-link">Integrasi</a></li>
                     <li><a href="index.html#pricing" class="nav-link">Harga</a></li>
                     <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
@@ -292,6 +426,18 @@
                 });
             });
         }
+    </script>
+    <script>
+        // Dropdown menu toggle for mobile
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('active');
+                }
+            });
+        });
+
     </script>
 </body>
 

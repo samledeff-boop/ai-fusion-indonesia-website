@@ -10,7 +10,9 @@
 
 ## 1. Resume executif
 
-AI Fusion Partner Indonesia (AFP Indonesia) est la premiere initiative d'expansion internationale d'AI Fusion vers l'Asie du Sud-Est. Base a Bali, ce projet vise a localiser et commercialiser la suite d'agents IA d'AI Fusion aupres des entreprises indonesiennes (UMKM, PME et grands comptes). Le modele est celui d'un partenaire/franchise local operant sous la marque "AI Fusion Partner" avec le domaine id.aifusionpartner.com.
+AI Fusion Partner Indonesia (AFP Indonesia) est la filiale indonesienne d'AI Fusion Partner, la meme entreprise. Base a Bali, elle commercialise le SaaS AI Fusion Partner (voir `projects/ai-fusion-saas/docs/`) aupres des entreprises indonesiennes (UMKM, PME et grands comptes) via le domaine id.aifusionpartner.com.
+
+> **Important :** AFP Indonesia n'est PAS un projet separe du SaaS. C'est la meme entreprise, le meme produit, adapte au marche indonesien. Les docs SaaS (`projects/ai-fusion-saas/docs/`) decrivent le produit, ces docs decrivent la strategie marche Indonesie.
 
 L'Indonesie represente un marche strategique : plus grande economie d'Asie du Sud-Est, 270M+ d'habitants, transformation digitale acceleree, et une adoption massive de WhatsApp comme canal de communication professionnelle.
 

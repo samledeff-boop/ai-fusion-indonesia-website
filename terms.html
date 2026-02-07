@@ -212,7 +212,107 @@
                 font-size: 1.4rem;
             }
         }
+    </style>    <style>
+
+    /* Dropdown Menu Styles */
+    .nav-menu li {
+        position: relative;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .dropdown-toggle::after {
+        content: '▼';
+        font-size: 0.7em;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown:hover .dropdown-toggle::after {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--color-bg-darker);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 8px 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-menu li {
+        list-style: none;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--color-text-primary);
+        padding-left: 25px;
+    }
+
+    @media (max-width: 768px) {
+        .dropdown-menu {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            border: none;
+            box-shadow: none;
+            padding-left: 20px;
+            background: transparent;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .dropdown.active .dropdown-menu {
+            max-height: 500px;
+        }
+
+        .dropdown-toggle::after {
+            content: '+';
+        }
+
+        .dropdown.active .dropdown-toggle::after {
+            content: '−';
+            transform: none;
+        }
+    }
+
     </style>
+
 </head>
 
 <body>
