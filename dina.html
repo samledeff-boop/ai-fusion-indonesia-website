@@ -1,327 +1,38 @@
-<!DOCTYPE html>
-<html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Dina - Agen AI Finance & Accounting untuk Bisnis Anda. Otomatisasi pembukuan dan invoice dengan AI.">
-    <title>Dina - Agen Finance & Accounting | AI Fusion Partner</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap"
-        rel="stylesheet">
-
-    <!-- Modern Stylesheet -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <style>
-        .agent-hero {
-            padding-top: 200px;
-            padding-bottom: 80px;
-            background: var(--color-bg-dark);
-        }
-
-        .scenario-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-xl);
-        }
-
-        .scenario-card {
-            background: rgba(16, 185, 129, 0.05);
-            border-radius: 20px;
-            padding: var(--spacing-lg);
-            border: 1px solid rgba(16, 185, 129, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .scenario-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: #10B981;
-        }
-
-        .scenario-icon {
-            font-size: 2rem;
-            margin-bottom: var(--spacing-sm);
-            display: block;
-        }
-
-        .results-section {
-            background-color: var(--color-bg-darker);
-            border-radius: 30px;
-            padding: var(--spacing-xl);
-            margin: var(--spacing-xxl) 0;
-        }
-
-        .result-stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #10B981;
-            display: block;
-        }
-
-        .stat-label {
-            color: var(--color-text-secondary);
-            font-weight: 500;
-        }
-
-        /* Bubble Glow for Dina */
-        .agent-avatar {
-            position: relative;
-        }
-
-        .agent-avatar::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 110%;
-            height: 110%;
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .agent-avatar-img {
-            border: 3px solid #10B981;
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
-        }
-    </style>
-    <!-- Aesthetic Updates -->
-    <link rel="stylesheet" href="assets/css/aesthetic-updates.css">
-</head>
-
-<body>
-    <div class="radial-glow glow-blue"></div>
-
-    <!-- ========== HEADER ========== -->
-    <header class="header" id="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <img src="assets/images/logos/logo-white-bg.webp" alt="AI Fusion Partner Logo" loading="lazy">
-                </a>
-
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-                    <span class="hamburger"></span>
-                </button>
-
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html#agents" class="nav-link">Agen AI</a></li>
-                    <li><a href="index.html#integrations" class="nav-link">Integrasi</a></li>
-                    <li><a href="index.html#pricing" class="nav-link">Harga</a></li>
-                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="https://wa.me/6285959866099?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20ingin%20booking%20demo%20gratis"
-                            class="btn btn-primary">Konsultasi Gratis</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- ========== HERO SECTION ========== -->
-    <section class="agent-hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div
-                        style="display: inline-block; background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
-                        🚀 SEGERA HADIR
-                    </div>
-                    <span class="agent-role"
-                        style="color: var(--color-green); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block;">Finance
-                        & Accounting Assistant</span>
-                    <h1 class="reveal" style="margin-top: 10px;">
-                        Halo, Saya <span style="color: var(--color-green);">Dina</span>.
-                    </h1>
-                    <h2 class="reveal"
-                        style="font-size: 1.5rem; margin-bottom: 20px; color: var(--color-text-secondary);">
-                        "Keuangan bisnis Anda, selalu terkontrol"
-                    </h2>
-                    <p class="hero-subtitle reveal">
-                        Saya mengotomatisasi invoice, pencatatan biaya, dan laporan keuangan rutin agar Anda bisa fokus
-                        sepenuhnya pada pertumbuhan bisnis tanpa pusing dengan angka. <strong>Tersedia kustomisasi penuh
-                            sesuai alur kerja bisnis Anda.</strong>
-                    </p>
-                    <div class="hero-ctas reveal">
-                        <a href="https://wa.me/6285959866099?text=Halo%2C%20saya%20tertarik%20dengan%20Dina%20(Finance%20Assistant)%20yang%20akan%20segera%20hadir"
-                            class="btn btn-primary btn-large"
-                            style="background: var(--gradient-green); box-shadow: 0 0 20px rgba(71, 163, 114, 0.3);">
-                            📱 Kabari Saya Saat Dina Hadir
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image reveal">
-                    <div class="agent-avatar">
-                        <img src="assets/images/avatar-finance.webp" alt="Dina" class="agent-avatar-img"
-                            onerror="this.src='https://via.placeholder.com/400/47A372/FFFFFF?text=Dina'">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SCENARIOS ========== -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-xl);">
-                <h2>Bagaimana Saya Merapikan <span style="color: var(--color-green);">Keuangan</span> Anda?</h2>
-                <p>Otomatisasi akuntansi untuk kejelasan finansial yang lebih baik setiap harinya.</p>
-            </div>
-
-            <div class="scenario-grid">
-                <div class="scenario-card">
-                    <span class="scenario-icon">📄</span>
-                    <h3>Invoice Otomatis</h3>
-                    <p>Membuat dan mengirim invoice profesional secara otomatis setelah pesanan dikonfirmasi.</p>
-                </div>
-                <div class="scenario-card">
-                    <span class="scenario-icon">💰</span>
-                    <h3>Payment Reminder</h3>
-                    <p>Mengirimkan pengingat pembayaran secara sopan dan terjadwal kepada pelanggan.</p>
-                </div>
-                <div class="scenario-card">
-                    <span class="scenario-icon">🧾</span>
-                    <h3>Pencatatan Biaya</h3>
-                    <p>Mencatat setiap pengeluaran dan menyimpan bukti transaksi secara digital dan terorganisir.</p>
-                </div>
-                <div class="scenario-card">
-                    <span class="scenario-icon">📈</span>
-                    <h3>Laporan P&L & Cashflow</h3>
-                    <p>Menghasilkan laporan laba rugi (Profit & Loss) dan arus kas (Cashflow) bulanan secara otomatis.
-                    </p>
-                </div>
-                <div class="scenario-card">
-                    <span class="scenario-icon">🏦</span>
-                    <h3>Rekonsiliasi Bank</h3>
-                    <p>Mencocokkan transaksi bank dan e-wallet dengan catatan internal bisnis Anda.</p>
-                </div>
-                <div class="scenario-card">
-                    <span class="scenario-icon">📊</span>
-                    <h3>Budgeting Pintar</h3>
-                    <p>Memberikan peringatan jika pengeluaran operasional Anda melebihi budget yang telah ditetapkan.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== RESULTS ========== -->
-    <section class="container">
-        <div class="results-section">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl);">
-                <div class="result-stat">
-                    <span class="stat-number">95%</span>
-                    <span class="stat-label">Akurasi Data</span>
-                </div>
-                <div class="result-stat">
-                    <span class="stat-number">80%</span>
-                    <span class="stat-label">Penghematan Waktu</span>
-                </div>
-                <div class="result-stat">
-                    <span class="stat-number">0</span>
-                    <span class="stat-label">Invoice Terlewat</span>
-                </div>
-                <div class="result-stat">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Pengawasan Keuangan</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CTA FINAL ========== -->
-    <section class="section"
-        style="background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 70%);">
-        <div class="container text-center">
-            <h2>Siap Mendigitalkan <span style="color: #10B981;">Manajemen Keuangan</span> Anda?</h2>
-            <p style="max-width: 600px; margin: 0 auto var(--spacing-lg);">Jangan biarkan pembukuan menjadi beban.
-                Biarkan Dina membantu Anda mengelola keuangan dengan lebih cerdas.</p>
-            <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
-                <a href="https://wa.me/6285959866099?text=Halo%2C%20saya%20tertarik%20dengan%20Dina%20(Finance%20Assistant)%20yang%20akan%20segera%20hadir"
-                    class="btn btn-primary btn-large"
-                    style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
-                    📱 Saya Tertarik - Beri Tahu Saya
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer
-        style="background: var(--color-bg-darker); padding: var(--spacing-xl) 0 var(--spacing-md); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <div class="logo" style="margin-bottom: var(--spacing-md);">
-                        <img src="assets/images/logos/logo-white-bg.png" alt="AI Fusion Partner Logo"
-                            style="height: 220px;">
-                    </div>
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-                        Mitra AI untuk pertumbuhan bisnis Anda di Indonesia.
-                    </p>
+                    <div class="logo"><img src="assets/images/logos/logo-white-bg.webp" alt="AI Fusion Partner Logo"
+                            loading="lazy"></div>
+                    <p class="footer-text">Mitra AI untuk pertumbuhan bisnis Anda di Indonesia.</p>
                 </div>
-
                 <div>
-                    <h4 style="color: var(--color-text-primary); margin-bottom: var(--spacing-sm); font-size: 1rem;">
-                        Produk</h4>
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: var(--spacing-xs);"><a href="index.html#agents"
-                                style="color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem;">Agen
-                                AI</a></li>
-                        <li style="margin-bottom: var(--spacing-xs);"><a href="index.html#pricing"
-                                style="color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem;">Harga</a>
-                        </li>
-                        <li style="margin-bottom: var(--spacing-xs);"><a href="index.html#integrations"
-                                style="color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem;">Integrasi</a>
-                        </li>
+                    <h4 class="footer-title">Produk</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html#agents" class="footer-link">Agen AI</a></li>
+                        <li><a href="index.html#integrations" class="footer-link">Integrasi</a></li>
+                        <li><a href="index.html#pricing" class="footer-link">Harga</a></li>
+                        <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="https://wa.me/6285959866099?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20punya%20pertanyaan"
+                                class="footer-link">Kontak</a></li>
                     </ul>
                 </div>
-
                 <div>
-                    <h4 style="color: var(--color-text-primary); margin-bottom: var(--spacing-sm); font-size: 1rem;">
-                        Perusahaan</h4>
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: var(--spacing-xs);"><a href="index.html#agents"
-                                style="color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem;">Tentang
-                                Kami</a></li>
-                        <li style="margin-bottom: var(--spacing-xs);"><a href="index.html#agents"
-                                style="color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem;">Blog</a>
-                        </li>
-                        <li style="margin-bottom: var(--spacing-xs);"><a
-                                href="https://wa.me/6285959866099?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20punya%20pertanyaan"
-                                style="color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem;">Kontak</a>
-                        </li>
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-list">
+                        <li><a href="terms.html" class="footer-link">Terms of Service</a>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a>
                     </ul>
                 </div>
-
                 <div>
-                    <h4 style="color: var(--color-text-primary); margin-bottom: var(--spacing-sm); font-size: 1rem;">
-                        Hubungi Kami</h4>
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-xs);">📧
-                        <a href="mailto:contact@aifusionpartner.com"
-                            style="color: inherit;">contact@aifusionpartner.com</a>
-                    </p>
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-xs);">📍
-                        Bali, Indonesia</p>
+                    <h4 class="footer-title">Hubungi Kami</h4>
+                    <p class="footer-text">📧 <a href="mailto:contact@aifusionpartner.com"
+                            style="color: inherit;">contact@aifusionpartner.com</a></p>
+                    <p class="footer-text">📍 Bali, Indonesia</p>
                 </div>
             </div>
-
-            <div
-                style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: var(--spacing-md); text-align: center;">
-                <p style="color: var(--color-text-muted); font-size: 0.85rem;">
-                    &copy; 2026 AI Fusion Partner. All rights reserved.
-                </p>
+            <div class="footer-copyright">
+                <p>&copy; 2026 AI Fusion Partner. All rights reserved.</p>
             </div>
         </div>
     </footer>
