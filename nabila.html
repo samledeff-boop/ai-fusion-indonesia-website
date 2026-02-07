@@ -1,4 +1,268 @@
-    <footer class="footer">
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Nabila - Agen AI HR & Manajemen Tim untuk Bisnis Anda. Otomatisasi onboarding, kehadiran, dan administrasi karyawan 24/7.">
+    <title>Nabila - Agen HR Manager & Team Management | AI Fusion Partner</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Modern Stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        :root {
+            --color-beige: #C4A77D;
+            --gradient-beige: linear-gradient(135deg, #C4A77D 0%, #E6C9A3 100%);
+        }
+
+        .agent-hero {
+            padding-top: 200px;
+            padding-bottom: 80px;
+            background: var(--color-bg-dark);
+        }
+
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .scenario-card {
+            background: var(--color-bg-card);
+            border-radius: 20px;
+            padding: var(--spacing-lg);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-beige);
+        }
+
+        .scenario-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        .results-section {
+            background-color: var(--color-bg-darker);
+            border-radius: 30px;
+            padding: var(--spacing-xl);
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .result-stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--color-beige);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--color-text-secondary);
+            font-weight: 500;
+        }
+
+        .text-beige {
+            color: var(--color-beige);
+        }
+
+        .btn-primary-beige {
+            background: var(--gradient-beige);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary-beige:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(196, 167, 125, 0.3);
+        }
+    </style>
+    <!-- Aesthetic Updates -->
+    <link rel="stylesheet" href="assets/css/aesthetic-updates.css">
+</head>
+
+<body>
+    <div class="radial-glow"
+        style="background: radial-gradient(circle at 50% 50%, rgba(196, 167, 125, 0.15), transparent 70%);"></div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logos/logo-white-bg.webp" alt="AI Fusion Partner Logo" loading="lazy">
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#agents" class="nav-link">Agen AI</a></li>
+                    <li><a href="index.html#integrations" class="nav-link">Integrasi</a></li>
+                    <li><a href="index.html#pricing" class="nav-link">Harga</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="https://wa.me/6285959866099?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20ingin%20booking%20demo%20gratis"
+                            class="btn btn-primary">Konsultasi Gratis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="agent-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div
+                        style="display: inline-block; background: linear-gradient(135deg, #C4A77D 0%, #8E7955 100%); color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(196, 167, 125, 0.3);">
+                        🚀 SEGERA HADIR
+                    </div>
+                    <span class="agent-role"
+                        style="color: #C4A77D; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block;">HR
+                        Manager Assistant</span>
+                    <h1 class="reveal" style="margin-top: 10px;">
+                        Halo, Saya <span style="color: #C4A77D;">Nabila</span>.
+                    </h1>
+                    <h2 class="reveal"
+                        style="font-size: 1.5rem; margin-bottom: 20px; color: var(--color-text-secondary);">
+                        "Tim hebat dimulai dari manajemen yang cerdas"
+                    </h2>
+                    <p class="hero-subtitle reveal">
+                        Saya membantu Anda mencari talenta terbaik dan mengelola administrasi karyawan secara otomatis,
+                        menciptakan lingkungan kerja yang produktif dan bahagia. <strong>Tersedia kustomisasi penuh
+                            sesuai alur kerja bisnis Anda.</strong>
+                    </p>
+                    <div class="hero-ctas reveal">
+                        <a href="https://wa.me/6285959866099?text=Halo%2C%20saya%20tertarik%20dengan%20Nabila%20(HR%20Manager%20Assistant)%20yang%20akan%20segera%20hadir"
+                            class="btn btn-primary btn-large"
+                            style="background: linear-gradient(135deg, #C4A77D 0%, #8E7955 100%); box-shadow: 0 0 20px rgba(196, 167, 125, 0.3);">
+                            📱 Kabari Saya Saat Nabila Hadir
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image reveal">
+                    <div class="agent-avatar">
+                        <img src="assets/images/nabila-portrait.jpg" alt="Nabila" class="agent-avatar-img"
+                            style="border-color: #C4A77D;"
+                            onerror="this.src='https://via.placeholder.com/400/C4A77D/FFFFFF?text=Nabila'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SCENARIOS ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-xl);">
+                <h2>Bagaimana Saya Mengelola <span style="color: #C4A77D;">Tim</span> Anda?</h2>
+                <p>Otomatisasi HR untuk efisiensi manajemen talenta dan kepuasan karyawan.</p>
+            </div>
+
+            <div class="scenario-grid">
+                <div class="scenario-card"
+                    style="border-color: rgba(196, 167, 125, 0.1); background: rgba(196, 167, 125, 0.05);">
+                    <span class="scenario-icon">📋</span>
+                    <h3>Lowongan & Screening</h3>
+                    <p>Membuat deskripsi pekerjaan dan melakukan screening CV awal secara otomatis untuk menemukan
+                        kandidat terbaik.</p>
+                </div>
+                <div class="scenario-card"
+                    style="border-color: rgba(196, 167, 125, 0.1); background: rgba(196, 167, 125, 0.05);">
+                    <span class="scenario-icon">👋</span>
+                    <h3>Onboarding Otomatis</h3>
+                    <p>Memandu karyawan baru melalui proses pengenalan perusahaan dan administrasi awal tanpa repot.</p>
+                </div>
+                <div class="scenario-card"
+                    style="border-color: rgba(196, 167, 125, 0.1); background: rgba(196, 167, 125, 0.05);">
+                    <span class="scenario-icon">⏱️</span>
+                    <h3>Manajemen Kehadiran</h3>
+                    <p>Mencatat kehadiran, keterlambatan, dan pengajuan cuti karyawan secara digital dan transparan.</p>
+                </div>
+                <div class="scenario-card"
+                    style="border-color: rgba(196, 167, 125, 0.1); background: rgba(196, 167, 125, 0.05);">
+                    <span class="scenario-icon">🎭</span>
+                    <h3>Survey Kepuasan</h3>
+                    <p>Melakukan survey anonim secara berkala untuk memantau moral dan kepuasan tim internal Anda.</p>
+                </div>
+                <div class="scenario-card"
+                    style="border-color: rgba(196, 167, 125, 0.1); background: rgba(196, 167, 125, 0.05);">
+                    <span class="scenario-icon">📁</span>
+                    <h3>Database Karyawan</h3>
+                    <p>Mengelola dokumen dan data penting karyawan dalam satu tempat yang aman dan terpusat.</p>
+                </div>
+                <div class="scenario-card"
+                    style="border-color: rgba(196, 167, 125, 0.1); background: rgba(196, 167, 125, 0.05);">
+                    <span class="scenario-icon">💡</span>
+                    <h3>Cultural Updates</h3>
+                    <p>Memberikan rekomendasi kegiatan internal untuk mempererat kerjasama tim berdasarkan data
+                        interaksi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RESULTS ========== -->
+    <section class="container">
+        <div class="results-section">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl);">
+                <div class="result-stat">
+                    <span class="stat-number">50%</span>
+                    <span class="stat-label">Hemat Waktu Admin</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Data Terorganisir</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Dokumen Hilang</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Dukungan Karyawan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== CTA FINAL ========== -->
+    <section class="section"
+        style="background: radial-gradient(circle at 50% 50%, rgba(196, 167, 125, 0.1) 0%, transparent 70%);">
+        <div class="container text-center">
+            <h2>Siap Merapikan <span class="text-beige">Manajemen HR</span> Anda?</h2>
+            <p style="max-width: 600px; margin: 0 auto var(--spacing-lg);">Ciptakan lingkungan kerja profesional dan
+                bahagia tanpa ribet administrasi.</p>
+            <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/6285959866099?text=Halo%2C%20saya%20tertarik%20dengan%20Nabila%20(HR%20Manager%20Assistant)"
+                    class="btn btn-primary btn-large btn-primary-beige">
+                    📱 Mulai dengan Nabila
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+        <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div>

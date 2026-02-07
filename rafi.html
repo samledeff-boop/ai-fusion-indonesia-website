@@ -1,4 +1,244 @@
-    <footer class="footer">
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rafi - Agen AI Social Media untuk Bisnis Anda. Otomatisasi konten dan interaksi di Instagram & TikTok.">
+    <title>Rafi - Agen Social Media | AI Fusion Partner</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Modern Stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .agent-hero {
+            padding-top: 200px;
+            padding-bottom: 80px;
+            background: var(--color-bg-dark);
+        }
+
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .scenario-card {
+            background: rgba(61, 138, 146, 0.05);
+            border-radius: 20px;
+            padding: var(--spacing-lg);
+            border: 1px solid rgba(61, 138, 146, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-turquoise);
+        }
+
+        .scenario-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        .results-section {
+            background-color: var(--color-bg-darker);
+            border-radius: 30px;
+            padding: var(--spacing-xl);
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .result-stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--color-turquoise);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--color-text-secondary);
+            font-weight: 500;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/aura-enhancements.css">
+    <link rel="stylesheet" href="assets/css/fixes-final.css">
+    <link rel="stylesheet" href="assets/css/aura-inspired.css">
+    <!-- Logo Override - MUST BE LAST -->
+    <link rel="stylesheet" href="assets/css/logo-override.css">
+    <!-- Aesthetic Updates -->
+    <link rel="stylesheet" href="assets/css/aesthetic-updates.css">
+</head>
+
+<body>
+    <div class="radial-glow glow-blue"></div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logos/logo-white-bg.webp" alt="AI Fusion Partner Logo" loading="lazy">
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#agents" class="nav-link">Agen AI</a></li>
+                    <li><a href="index.html#integrations" class="nav-link">Integrasi</a></li>
+                    <li><a href="index.html#pricing" class="nav-link">Harga</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="https://wa.me/6285959866099?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20ingin%20booking%20demo%20gratis"
+                            class="btn btn-primary">Konsultasi Gratis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="agent-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="agent-role"
+                        style="color: var(--color-turquoise); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Marketing
+                        & Social Media Assistant</span>
+                    <h1 class="reveal" style="margin-top: 10px;">
+                        Halo, Saya <span style="color: var(--color-turquoise);">Rafi</span>.
+                    </h1>
+                    <h2 class="reveal"
+                        style="font-size: 1.5rem; margin-bottom: 20px; color: var(--color-text-secondary);">
+                        "Kreativitas tanpa batas, 24 jam sehari"
+                    </h2>
+                    <p class="hero-subtitle reveal">
+                        Saya membuat konten visual, menulis caption yang viral, dan mengelola kehadiran brand Anda di
+                        Instagram dan TikTok secara otomatis agar Anda bisa fokus pada strategi bisnis. <strong>Tersedia
+                            kustomisasi penuh sesuai alur kerja bisnis Anda.</strong>
+                    </p>
+                    <div class="hero-ctas reveal">
+                        <a href="https://wa.me/6285959866099?text=Halo%2C%20saya%20tertarik%20dengan%20Rafi%20(Marketing%20Assistant)"
+                            class="btn btn-primary btn-large"
+                            style="background: var(--gradient-turquoise); box-shadow: 0 0 20px rgba(61, 138, 146, 0.3);">
+                            📱 Booking Demo Rafi
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image reveal">
+                    <div class="agent-avatar">
+                        <img src="assets/images/rafi-portrait.png" alt="Rafi" class="agent-avatar-img"
+                            onerror="this.src='https://via.placeholder.com/400/3d8a92/FFFFFF?text=Rafi'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SCENARIOS ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-xl);">
+                <h2>Bagaimana Saya Membantu Pertumbuhan <span style="color: var(--color-turquoise);">Brand</span> Anda?
+                </h2>
+                <p>Otomatisasi konten dan keterlibatan audiens untuk pertumbuhan yang konsisten.</p>
+            </div>
+
+            <div class="scenario-grid">
+                <div class="scenario-card">
+                    <span class="scenario-icon">🎨</span>
+                    <h3>Konten Visual AI</h3>
+                    <p>Menghasilkan gambar dan video yang selaras dengan identitas brand dan target audiens Anda.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-icon">✍️</span>
+                    <h3>Caption Viral</h3>
+                    <p>Menulis caption yang terasa natural, kekinian dan mendorong interaksi.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-icon">📅</span>
+                    <h3>Posting Otomatis</h3>
+                    <p>Menjadwalkan dan mempublikasikan konten di Instagram & TikTok pada waktu terbaik untuk
+                        maksimalkan
+                        engagement.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-icon">💬</span>
+                    <h3>Auto Balas DM & Komentar</h3>
+                    <p>Merespon setiap DM dan komentar audiens di sosial media secara instan, 24/7.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-icon">📈</span>
+                    <h3>Analisis Performa</h3>
+                    <p>Menganalisis performa konten dan memberikan insight untuk strategi berikutnya.</p>
+                </div>
+                <div class="scenario-card">
+                    <span class="scenario-icon">🚀</span>
+                    <h3>Update Tren Viral</h3>
+                    <p>Mengikuti tren terbaru di Indonesia untuk menjaga konten tetap relevan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RESULTS ========== -->
+    <section class="container">
+        <div class="results-section">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-xl);">
+                <div class="result-stat">
+                    <span class="stat-number">4x</span>
+                    <span class="stat-label">Frekuensi Posting</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">DM Terbalas Cepat</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-number">250%</span>
+                    <span class="stat-label">Kenaikan Engagement</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Monitoring Aktif</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INTEGRATIONS ========== -->
+
+    <!-- ========== CTA FINAL ========== -->
+    <section class="section"
+        style="background: radial-gradient(circle at 50% 50%, rgba(61, 138, 146, 0.1) 0%, transparent 70%);">
+        <div class="container text-center">
+            <h2>Siap Membuat <span style="color: var(--color-turquoise);">Social Media</span> Anda Bekerja Sendiri?</h2>
+            <p style="max-width: 600px; margin: 0 auto var(--spacing-lg);">Fokuslah pada strategi bisnis, biar Rafi yang
+                mengurus konten dan interaksi harian Anda.</p>
+            <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/6285959866099?text=Halo%2C%20saya%20tertarik%20dengan%20Rafi%20(Marketing%20Assistant)"
+                    class="btn btn-primary btn-large" style="background: var(--gradient-turquoise);">
+                    📱 Booking Demo Rafi Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+        <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div>
