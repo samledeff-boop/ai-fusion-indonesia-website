@@ -72,7 +72,9 @@
         .stat-label {
             color: var(--color-text-secondary);
             font-weight: 500;
-        }        /* Bubble Glow for Sari */
+        }
+
+        /* Bubble Glow for Sari */
         .agent-avatar {
             position: relative;
         }
@@ -89,95 +91,92 @@
             z-index: -1;
             pointer-events: none;
         }
-
     </style>
     <!-- Aesthetic Updates -->
-    <link rel="stylesheet" href="assets/css/aesthetic-updates.css">    <style>
-
-    /* Dropdown Menu Styles - Simple & Clean */
-    .nav-menu li {
-        position: relative;
-    }
-
-    .dropdown {
-        position: relative;
-    }
-
-    .dropdown-toggle {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        cursor: pointer;
-    }
-
-    .dropdown-menu {
-        position: absolute;
-        top: calc(100% + 10px);
-        left: 0;
-        background: white;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 8px 0;
-        min-width: 220px;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: all 0.25s ease;
-        z-index: 1000;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .dropdown:hover .dropdown-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .dropdown-menu li {
-        list-style: none;
-    }
-
-    .dropdown-menu a {
-        display: block;
-        padding: 10px 20px;
-        color: #333;
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: all 0.2s ease;
-    }
-
-    .dropdown-menu a:hover {
-        background: #f5f5f5;
-        color: #000;
-    }
-
-    @media (max-width: 768px) {
-        .dropdown-menu {
-            position: static;
-            opacity: 1;
-            visibility: visible;
-            transform: none;
-            border: none;
-            box-shadow: none;
-            padding: 8px 0 8px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 4px;
-            margin-top: 8px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
+    <link rel="stylesheet" href="assets/css/aesthetic-updates.css">
+    <style>
+        /* Dropdown Menu Styles - Simple & Clean */
+        .nav-menu li {
+            position: relative;
         }
 
-        .dropdown.active .dropdown-menu {
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 8px 0;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.25s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            list-style: none;
         }
 
         .dropdown-menu a {
-            color: rgba(255, 255, 255, 0.9);
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
         }
-    }
 
-    /* Image cropping - léger */
+        .dropdown-menu a:hover {
+            background: #f5f5f5;
+            color: #000;
+        }
 
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                border: none;
+                box-shadow: none;
+                padding: 8px 0 8px 20px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 4px;
+                margin-top: 8px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .dropdown.active .dropdown-menu {}
+
+            .dropdown-menu a {
+                color: rgba(255, 255, 255, 0.9);
+            }
+        }
+
+        /* Image cropping - léger */
     </style>
 
 </head>
@@ -186,7 +185,7 @@
     <div class="radial-glow glow-blue"></div>
 
     <!-- ========== HEADER ========== -->
-        <header class="header" id="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
@@ -203,7 +202,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="amanda.html">Amanda - Support WhatsApp</a></li>
                             <li><a href="rafi.html">Rafi - Social Media</a></li>
-                            <li><a href="sari.html">Sari - SEO & Content</a></li>
+                            <li><a href="sari.html">Sari - Website & SEO</a></li>
                             <li><a href="kevin.html">Kevin - Sales & Management</a></li>
                             <li><a href="dina.html">Dina - Finance</a></li>
                             <li><a href="arif.html">Arif - Legal</a></li>
@@ -253,8 +252,8 @@
                     <div class="agent-avatar">
                         <img src="assets/images/agents/sari-main-800.webp"
                             srcset="assets/images/agents/sari-main-400.webp 400w, assets/images/agents/sari-main-800.webp 800w"
-                            sizes="(max-width: 768px) 300px, 500px" alt="Sari" class="agent-avatar-img"
-                            loading="eager" decoding="async" fetchpriority="high"
+                            sizes="(max-width: 768px) 300px, 500px" alt="Sari" class="agent-avatar-img" loading="eager"
+                            decoding="async" fetchpriority="high"
                             onerror="this.src='https://via.placeholder.com/400/5078E7/FFFFFF?text=Sari'">
                     </div>
                 </div>
@@ -354,7 +353,7 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div>
@@ -417,7 +416,7 @@
     <script>
         // Dropdown menu toggle for mobile
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
+            toggle.addEventListener('click', function (e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     this.parentElement.classList.toggle('active');
