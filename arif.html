@@ -93,92 +93,90 @@
         }
     </style>
     <!-- Aesthetic Updates -->
-    <link rel="stylesheet" href="assets/css/aesthetic-updates.css">    <style>
-
-    /* Dropdown Menu Styles - Simple & Clean */
-    .nav-menu li {
-        position: relative;
-    }
-
-    .dropdown {
-        position: relative;
-    }
-
-    .dropdown-toggle {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        cursor: pointer;
-    }
-
-    .dropdown-menu {
-        position: absolute;
-        top: calc(100% + 10px);
-        left: 0;
-        background: white;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 8px 0;
-        min-width: 220px;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: all 0.25s ease;
-        z-index: 1000;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .dropdown:hover .dropdown-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .dropdown-menu li {
-        list-style: none;
-    }
-
-    .dropdown-menu a {
-        display: block;
-        padding: 10px 20px;
-        color: #333;
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: all 0.2s ease;
-    }
-
-    .dropdown-menu a:hover {
-        background: #f5f5f5;
-        color: #000;
-    }
-
-    @media (max-width: 768px) {
-        .dropdown-menu {
-            position: static;
-            opacity: 1;
-            visibility: visible;
-            transform: none;
-            border: none;
-            box-shadow: none;
-            padding: 8px 0 8px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 4px;
-            margin-top: 8px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
+    <link rel="stylesheet" href="assets/css/aesthetic-updates.css">
+    <style>
+        /* Dropdown Menu Styles - Simple & Clean */
+        .nav-menu li {
+            position: relative;
         }
 
-        .dropdown.active .dropdown-menu {
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 8px 0;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.25s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            list-style: none;
         }
 
         .dropdown-menu a {
-            color: rgba(255, 255, 255, 0.9);
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
         }
-    }
 
-    /* Image cropping - léger */
+        .dropdown-menu a:hover {
+            background: #f5f5f5;
+            color: #000;
+        }
 
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                border: none;
+                box-shadow: none;
+                padding: 8px 0 8px 20px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 4px;
+                margin-top: 8px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .dropdown.active .dropdown-menu {}
+
+            .dropdown-menu a {
+                color: rgba(255, 255, 255, 0.9);
+            }
+        }
+
+        /* Image cropping - léger */
     </style>
 
 </head>
@@ -187,7 +185,7 @@
     <div class="radial-glow glow-blue"></div>
 
     <!-- ========== HEADER ========== -->
-        <header class="header" id="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
@@ -215,7 +213,11 @@
                     <li><a href="index.html#integrations" class="nav-link">Integrasi</a></li>
                     <li><a href="index.html#pricing" class="nav-link">Harga</a></li>
                     <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+<<<<<<< HEAD
                     <li><a href="https://wa.me/6285173464065?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20ingin%20booking%20demo%20gratis"
+=======
+                    <li><a href="https://wa.me/6287724030064?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20ingin%20booking%20demo%20gratis"
+>>>>>>> 7cc202c (Update all WhatsApp links to +6287724030064)
                             class="btn btn-primary">Konsultasi Gratis</a></li>
                 </ul>
             </nav>
@@ -232,7 +234,7 @@
                         🚀 SEGERA HADIR
                     </div>
                     <span class="agent-role"
-                        style="color: var(--color-red); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Legal
+                        style="color: var(--color-red); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block;">Legal
                         & Compliance Assistant</span>
                     <h1 class="reveal" style="margin-top: 10px;">
                         Halo, Saya <span style="color: var(--color-red);">Arif</span>.
@@ -247,7 +249,11 @@
                             sesuai alur kerja bisnis Anda.</strong>
                     </p>
                     <div class="hero-ctas reveal">
+<<<<<<< HEAD
                         <a href="https://wa.me/6285173464065?text=Halo%2C%20saya%20tertarik%20dengan%20Arif%20(Legal%20Assistant)%20yang%20akan%20segera%20hadir"
+=======
+                        <a href="https://wa.me/6287724030064?text=Halo%2C%20saya%20tertarik%20dengan%20Arif%20(Legal%20Assistant)%20yang%20akan%20segera%20hadir"
+>>>>>>> 7cc202c (Update all WhatsApp links to +6287724030064)
                             class="btn btn-primary btn-large"
                             style="background: var(--gradient-red); box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);">
                             📱 Kabari Saya Saat Arif Hadir
@@ -258,8 +264,8 @@
                     <div class="agent-avatar">
                         <img src="assets/images/agents/arif-main-800.webp"
                             srcset="assets/images/agents/arif-main-400.webp 400w, assets/images/agents/arif-main-800.webp 800w"
-                            sizes="(max-width: 768px) 300px, 500px" alt="Arif" class="agent-avatar-img"
-                            loading="eager" decoding="async" fetchpriority="high"
+                            sizes="(max-width: 768px) 300px, 500px" alt="Arif" class="agent-avatar-img" loading="eager"
+                            decoding="async" fetchpriority="high"
                             onerror="this.src='https://via.placeholder.com/400/EF4444/FFFFFF?text=Arif'">
                     </div>
                 </div>
@@ -351,7 +357,11 @@
             <p style="max-width: 600px; margin: 0 auto var(--spacing-lg);">Jangan biarkan kompleksitas hukum menghambat
                 pertumbuhan. Biarkan Arif menjaga kepatuhan dan keamanan dokumen Anda.</p>
             <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
+<<<<<<< HEAD
                 <a href="https://wa.me/6285173464065?text=Halo%2C%20saya%20tertarik%20dengan%20Arif%20(Legal%20Assistant)%20yang%20akan%20segera%20hadir"
+=======
+                <a href="https://wa.me/6287724030064?text=Halo%2C%20saya%20tertarik%20dengan%20Arif%20(Legal%20Assistant)%20yang%20akan%20segera%20hadir"
+>>>>>>> 7cc202c (Update all WhatsApp links to +6287724030064)
                     class="btn btn-primary btn-large"
                     style="background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);">
                     📱 Saya Tertarik - Beri Tahu Saya
@@ -361,7 +371,7 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div>
@@ -376,7 +386,11 @@
                         <li><a href="index.html#integrations" class="footer-link">Integrasi</a></li>
                         <li><a href="index.html#pricing" class="footer-link">Harga</a></li>
                         <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+<<<<<<< HEAD
                         <li><a href="https://wa.me/6285173464065?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20punya%20pertanyaan"
+=======
+                        <li><a href="https://wa.me/6287724030064?text=Halo%20AI%20Fusion%20Partner%2C%20saya%20punya%20pertanyaan"
+>>>>>>> 7cc202c (Update all WhatsApp links to +6287724030064)
                                 class="footer-link">Kontak</a></li>
                     </ul>
                 </div>
@@ -424,7 +438,7 @@
     <script>
         // Dropdown menu toggle for mobile
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
+            toggle.addEventListener('click', function (e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     this.parentElement.classList.toggle('active');

@@ -152,7 +152,7 @@ Les UMKM (Usaha Mikro, Kecil, dan Menengah) representent 65 millions d'entrepris
 
 | Canal | Strategie | Objectif |
 |-------|-----------|----------|
-| **WhatsApp** | Numero dedie (+62 859-5986-6099), reponse rapide, demo via WA | Canal principal de conversion |
+| **WhatsApp** | Numero dedie (+62 877-2403-0064), reponse rapide, demo via WA | Canal principal de conversion |
 | **SEO local** | Blog en Bahasa Indonesia, mots-cles locaux (agen AI Indonesia, otomasi WhatsApp) | Trafic organique, autorite |
 | **Instagram** | Contenu educatif, reels demo, stories temoignages | Notoriete, engagement |
 | **TikTok** | Videos courtes demo, avant/apres, tips UMKM | Viralite, audience jeune |

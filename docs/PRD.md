@@ -23,7 +23,7 @@ AI Fusion Partner Indonesia est un service d'agents IA specialises pour les entr
 | Pages legales | En ligne | privacy.html, terms.html |
 | SEO technique | Configure | Sitemap, robots.txt, structured data (JSON-LD), Open Graph |
 | QRIS paiement | Logo present | Integration prevue |
-| WhatsApp CTA | Actif | +62 859-5986-6099 |
+| WhatsApp CTA | Actif | +62 877-2403-0064 |
 | Plateforme SaaS | En developpement | Next.js, Supabase, Stripe |
 
 ### 1.3 Architecture technique actuelle
