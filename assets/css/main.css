@@ -1269,18 +1269,9 @@ html body .header.scrolled .navbar .logo img {
   margin-bottom: 1rem;
 }
 
-.agent-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
 .agent-visual img {
   width: 100%;
-  border-radius: 0;
-  object-fit: contain;
-  object-position: center;
+  border-radius: 20px;
 }
 
 /* Per-agent button hover colors (ID specificity) */
