@@ -2,3 +2,9 @@
 scripts
 wrangler.toml
 .assetsignore
+CLAUDE.md
+docs
+*.sh
+*.py
+.DS_Store
+README.md

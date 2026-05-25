@@ -311,9 +311,22 @@
             .roi-inputs { grid-template-columns: 1fr; }
         }
         @media (max-width: 520px) {
-            .stats, .benefits, .industries, .win-stats, .roi-mini { grid-template-columns: 1fr; }
+            .container { padding: 0 18px; }
+            .benefits { grid-template-columns: 1fr; }
             .agent-panel, .roi, .consultant { padding: 26px 20px; }
-            .logostrip .row { gap: 26px; }
+            .pricing-incl, .pricing-cta { padding: 30px 22px; }
+            .logostrip .row { gap: 22px; }
+            .section { padding: 60px 0; }
+            .hero { padding: 56px 0 64px; }
+            .hero h1 { font-size: 2.15rem; }
+            .section-head h2 { font-size: 1.8rem; }
+            .hero .sub, .section-head p { font-size: 1rem; }
+            .hero-ctas { flex-direction: column; align-items: stretch; }
+            .hero-ctas .btn { width: 100%; }
+            .hero-operatives { gap: 9px; padding: 5px 14px 5px 6px; }
+            .hero-operatives .avatars img { width: 28px; height: 28px; margin-left: -10px; }
+            .hero-operatives .op-count { font-size: .72rem; }
+            .agent-visual { max-width: 300px; margin: 0 auto; }
         }
     </style>
 </head>
