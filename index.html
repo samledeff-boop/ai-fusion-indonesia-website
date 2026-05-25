@@ -60,7 +60,7 @@
         header.scrolled { border-bottom-color: var(--border); box-shadow: 0 4px 24px rgba(16,17,22,.05); }
         .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
         .nav .logo { display: flex; align-items: center; gap: 10px; }
-        .nav .logo img { height: 28px; width: auto; }
+        .nav .logo img { height: 22px; width: auto; }
         .nav .logo span { font-family: var(--font-display); font-weight: 800; font-size: 1.06rem; color: var(--ink); }
         .nav-menu { display: flex; align-items: center; gap: 30px; list-style: none; }
         .nav-link { font-size: .95rem; font-weight: 500; color: var(--body); transition: color .2s; }
@@ -303,8 +303,8 @@
             .stats, .benefits, .industries { grid-template-columns: repeat(2,1fr); }
             .foot-grid { grid-template-columns: 1fr 1fr; }
             .consultant { padding: 36px 26px; }
-            .nav-menu { position: fixed; inset: 72px 0 auto 0; background: #fff; flex-direction: column; align-items: flex-start; gap: 6px; padding: 18px 24px 28px; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-md); transform: translateY(-130%); transition: transform .3s; }
-            .nav-menu.open { transform: none; }
+            .nav-menu { position: fixed; inset: 72px 0 auto 0; background: #fff; flex-direction: column; align-items: stretch; gap: 6px; padding: 14px 24px 22px; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-md); opacity: 0; visibility: hidden; transform: translateY(-8px); pointer-events: none; transition: opacity .25s ease, transform .25s ease, visibility .25s; }
+            .nav-menu.open { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
             .nav-menu li { width: 100%; } .nav-menu .btn { width: 100%; margin-top: 8px; }
             .menu-toggle { display: flex; }
             .section { padding: 76px 0; }
@@ -327,6 +327,8 @@
             .hero-operatives .avatars img { width: 28px; height: 28px; margin-left: -10px; }
             .hero-operatives .op-count { font-size: .72rem; }
             .agent-visual { max-width: 300px; margin: 0 auto; }
+            .consultant .btn { white-space: normal; line-height: 1.3; height: auto; }
+            .consultant .feats { gap: 10px 18px; }
         }
     </style>
 </head>
@@ -489,33 +491,6 @@
             <div class="reveal">
                 <div class="agent-tabs" id="agentTabs"></div>
                 <div class="agent-panel" id="agentPanel"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROI -->
-    <section class="section">
-        <div class="container">
-            <div class="roi reveal">
-                <h3>Hitung <span class="grad-orange">berapa jam yang bisa dihemat</span> per bulan</h3>
-                <p class="roi-sub">Lihat berapa banyak waktu dan tugas yang bisa Anda otomasi.</p>
-                <div class="roi-inputs">
-                    <div><label>Berapa pesan pelanggan per hari?</label>
-                        <select id="roiMessages" onchange="calcROI()"><option value="20">20-50 pesan</option><option value="50" selected>50-100 pesan</option><option value="100">100-200 pesan</option><option value="200">200+ pesan</option></select></div>
-                    <div><label>Berapa jam/hari tim handle pelanggan?</label>
-                        <select id="roiHours" onchange="calcROI()"><option value="2">2-3 jam</option><option value="4" selected>4-6 jam</option><option value="6">6-8 jam</option><option value="8">8+ jam</option></select></div>
-                </div>
-                <div class="roi-result">
-                    <div class="lbl">Waktu yang dihemat per bulan</div>
-                    <div class="big" id="roiSavings">84 jam</div>
-                    <div id="roiSub" style="color:var(--body)">Setara dengan 11 hari kerja penuh untuk mengembangkan bisnis</div>
-                    <div class="roi-mini">
-                        <div><div class="v">24/7</div><div class="l">Selalu online</div></div>
-                        <div><div class="v" id="roiResp">&lt; 2 menit</div><div class="l">Waktu respon</div></div>
-                        <div><div class="v">5×</div><div class="l">Lebih produktif</div></div>
-                    </div>
-                    <div style="margin-top:24px"><a href="https://wa.me/6287724030064?text=Halo%2C%20saya%20ingin%20konsultasi%20tentang%20efisiensi%20bisnis%20saya" class="btn btn-primary">Konsultasi Gratis dengan Tim Kami</a></div>
-                </div>
             </div>
         </div>
     </section>
@@ -722,14 +697,6 @@
         const buildLogos = () => logos.map(l => { const src = l.includes('.') ? l : l + '.webp'; return `<div class="ilogo"><img src="assets/images/logos/${src}" alt="${l}" loading="lazy"></div>`; }).join('');
         mq.innerHTML = buildLogos() + buildLogos();
 
-        function calcROI() {
-            const msg = +document.getElementById('roiMessages').value, hrs = +document.getElementById('roiHours').value;
-            const saved = Math.round(hrs * 30 * 0.7), days = Math.round(saved / 8);
-            document.getElementById('roiSavings').textContent = saved + ' jam';
-            document.getElementById('roiSub').textContent = `Setara dengan ${days} hari kerja penuh untuk mengembangkan bisnis`;
-            document.getElementById('roiResp').innerHTML = msg < 50 ? '&lt; 1 menit' : msg < 100 ? '&lt; 2 menit' : '&lt; 3 menit';
-        }
-        calcROI();
 
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 30));
